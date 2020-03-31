@@ -78,11 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-<<<<<<< HEAD
 	'database' => 'db_tubeswebpro',
-=======
-	'database' => 'db_tubes',
->>>>>>> 6ecb975b0561fa2657d4e1e2dba874cb27d8c083
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
