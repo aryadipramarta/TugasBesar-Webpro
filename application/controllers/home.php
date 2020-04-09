@@ -1,9 +1,10 @@
 <?php
 
-class home extends CI_Controller{
+class home extends CI_Controller
+{
 
-    public function index(){
+    public function index()
+    {
         $this->load->view('homepage_view');
     }
-    
 }
