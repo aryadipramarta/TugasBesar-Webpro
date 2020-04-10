@@ -61,3 +61,39 @@ body {
 .bottom-img{
   width: 100%;
 }
+.body_login{
+  background-color:#26f596;
+}
+.btn_login{
+  padding: 10px 250px;
+  cursor: pointer;
+  background-color: #26f596;
+  border-radius: 6px;
+}
+.btn_login:hover {background-color: #2fc47e}
+
+.btn_login:active {
+  background-color: #2fc47e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.acc_link{
+  color: #2fc47e;
+  font-size: small;
+}
+.acc_link:hover{
+  color: #2fc47e;
+}
+.acc_link:active{
+  color: #2fc47e;
+}
+.pass_link{
+  color: #2fc47e;
+  font-size: small;
+}
+.pass_link:hover{
+  color: #2fc47e;
+}
+.pass_link:active{
+  color: #2fc47e;
+}
