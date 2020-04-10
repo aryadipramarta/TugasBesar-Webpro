@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2020 at 02:52 PM
+-- Generation Time: Apr 10, 2020 at 05:56 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -30,9 +30,25 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `pasien` (
   `id_pasien` int(10) NOT NULL,
-  `nama_pasien` varchar(100) NOT NULL,
-  `no_hp` int(20) NOT NULL,
-  `alamat` varchar(100) NOT NULL
+  `full_name` varchar(100) NOT NULL,
+  `alamat` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produk`
+--
+
+CREATE TABLE `produk` (
+  `id` int(5) NOT NULL,
+  `tipe_produk` varchar(20) NOT NULL,
+  `nama_produk` varchar(100) NOT NULL,
+  `harga` int(100) NOT NULL,
+  `deskripsi` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -46,6 +62,12 @@ ALTER TABLE `pasien`
   ADD PRIMARY KEY (`id_pasien`);
 
 --
+-- Indexes for table `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -54,6 +76,12 @@ ALTER TABLE `pasien`
 --
 ALTER TABLE `pasien`
   MODIFY `id_pasien` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
