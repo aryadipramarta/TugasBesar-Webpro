@@ -12,11 +12,27 @@ class auth extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'SkinSaver-Login';
-        $this->load->view('template/auth_header', $data);
-        $this->load->view('auth/login');
-        $this->load->view('template/auth_footer');
+        $this->form_validation->set_rules('username', 'Username', 'required|trim');
+        $this->form_validation->set_rules('password', 'Password', 'required|trim');
+        if ($this->form_validation->run() == false) {
+
+            $data['title'] = 'SkinSaver-Login';
+            $this->load->view('template/auth_header', $data);
+            $this->load->view('auth/login');
+            $this->load->view('template/auth_footer');
+        } else {
+            $data['username'] = $this->input->post('username');
+            $data['password'] = $this->input->post('password');
+            $result = $this->authModel->login($data);
+            if ($result) {
+                redirect('home');
+            } else {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password or Username is wrong!</div>');
+                redirect('auth');
+            }
+        }
     }
+
 
     public function register()
     {
@@ -44,7 +60,7 @@ class auth extends CI_Controller
             $this->load->view('auth/register');
             $this->load->view('template/auth_footer');
         } else {
-            $this->authModel->insertnewuser();
+            $this->authModel->createUser();
             redirect('auth', 'refresh');
         }
     }

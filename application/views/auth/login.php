@@ -13,12 +13,19 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Login Page</kh1>
                                 </div>
-                                <form class="user">
+                                <form class="user" method="post" action="<?= base_url('auth') ?>">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" placeholder="Enter Username..." name="username" id="username">
+                                        <?= $this->session->flashdata('message');  ?>
+                                        <input type="text" class="form-control form-control-user" placeholder="Enter Username..." name="username" id="username" value="<?= set_value('username'); ?>">
+                                        <small class="text-danger">
+                                            <?= form_error('username');  ?>
+                                        </small>
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" placeholder="Password" name="password" id="password">
+                                        <small class="text-danger">
+                                            <?= form_error('password');  ?>
+                                        </small>
                                     </div>
                                     <button type="submit" class="btn_login">
                                         Login
