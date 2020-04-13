@@ -68,30 +68,52 @@
     <img src="<?= base_url('assets/image/wave1.png')?>" class="bottom-img">
   </section>
 
+<!--Service-->
+<section class="services">
+  <div class="container text-center">
+    <h1 class="title">LAYANAN KAMI</h1>
+    <div class="row text-center">
+      <div class="col-md services">
+        <img src="<?= base_url('assets/image/product.png')?>" class="service-img">
+        <h4><b>PRODUCT</b></h4>
+        <p>Kami menyediakan produk unggulan yang bisa membantu customer dalam menyembuhkan 
+           segala permasalahan kulit mereka</p>
+      </div>
+      <div class="col-md services">
+        <img src="<?= base_url('assets/image/doctor.png')?>" class="service-img">
+        <h4><b>DOKTER</b></h4>
+        <p>Kami juga menyediakan pelayan dokter terbaik yang berasal dari seluruh indonesi
+          yang siap membantu melayani anda di dalam menyelesaikan masalah masalah yang anda butuhkan
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Testimonials -->
   <section class="testimonials text-center">
     <div class="container">
-      <h2 class="mb-5">What people are saying...</h2>
+      <h1 class="title">PENDAPAT MEREKA</h1>
       <div class="row">
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
-            <h5>Margaret E.</h5>
-            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+            <h5>Stephanie Putri</h5>
+            <p class="font-weight-light mb-0">"Mantap! saya senang dengan ini semua"</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
-            <h5>Fred S.</h5>
-            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+            <h5>Jessica Monica</h5>
+            <p class="font-weight-light mb-0">"Kualitas terpercaya dan layanan yang sangat memuaskan dari skinsaver"</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
             <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
-            <h5>Sarah W.</h5>
-            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+            <h5>Johnson A.</h5>
+            <p class="font-weight-light mb-0">"Sudah beberapa kali saya melakukan pemesanan dan pemeriksaan disini sangat terpercaya dan hasilnya mantap"</p>
           </div>
         </div>
       </div>
@@ -99,13 +121,32 @@
   </section>
 
 
-  <!-- Footer -->
-  <footer class="footer bg-light">
-          <p class="text-center">&copy; SkinSaver Webpro 2020. All Rights Reserved.</p>
+   <!-- Footer -->
+   <section id="footer">
+    <img src="<?= base_url('assets/image/footers.png')?>" class="footer-img">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-box">
+          <p><b>LOGO SKINSAVER</b></p>
+          <img src="logo" alt="">
+          <p>SkinSaver merupakan Klinik Kecantikan yang mempunyai nama dan sudah 
+            terkenal dikalangan masyarakat umum.</p>
+        </div>
+        <div class="col-md-4 footer-box">
+          <h4><b>CONTACT US</b></h4>
+          <p><i class="fa fa-map-marker"></i> Jl. Telekomunikasi Jl. Terusan Buah Batu, Sukapura, Kec. Dayeuhkolot, Bandung, Jawa Barat 40257</p>
+          <p><i class="fa fa-phone"></i> +628123456789</p>
+          <p><i class="fa fa-envelope"></i> skinsaver@company.com</p>
+        </div>
+        <div class="col-md-4 footer-box">
+          <h4><b>SUBSCRIBE NEWSLATTER</b></h4>
+          <input type="email" class="form-control" placeholder="Your Email">
+          <button type="button" class="btn btn-primary">Subscribe</button>
         </div>
       </div>
+      <p class="copyright">SkinSaver Website 2020 - Web Programming</p>
     </div>
-  </footer>
+  </section>
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
