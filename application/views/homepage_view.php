@@ -25,7 +25,7 @@
   <!-- Navigation -->
   <section id="nav-bar">
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">SKIN SAVER LOGO</a>
+    <img src="<?= base_url('assets/image/logo.png')?>" class="navbar-brand">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
@@ -127,8 +127,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 footer-box">
-          <p><b>LOGO SKINSAVER</b></p>
-          <img src="logo" alt="">
+          <img src="<?= base_url('assets/image/logo.png')?>" class="footer-img">
           <p>SkinSaver merupakan Klinik Kecantikan yang mempunyai nama dan sudah 
             terkenal dikalangan masyarakat umum.</p>
         </div>
