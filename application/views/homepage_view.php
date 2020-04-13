@@ -26,6 +26,7 @@
   <section id="nav-bar">
   <nav class="navbar navbar-expand-lg navbar-light">
      <h1 class="navbar-brand">SKIN SAVER</h1>
+    <img src="<?= base_url('assets/image/logo.png')?>" class="navbar-brand">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
