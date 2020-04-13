@@ -26,7 +26,6 @@
   <section id="nav-bar">
   <nav class="navbar navbar-expand-lg navbar-light">
      <h1 class="navbar-brand">SKIN SAVER</h1>
-    <img src="<?= base_url('assets/image/logo.png')?>" class="navbar-brand">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars"></i>
     </button>
@@ -54,7 +53,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-        <img src="<?= base_url('assets/image/logo.png')?>" class="container">
+        <img src="<?= base_url('assets/image/logo.png')?>" class="banner-img">
           <p class="isipromo">Kami siap membantu segala permasalah kulit dan wajah anda , <br> Gabung bersama kami untuk mendapatkan solusi dari segala permasalahan yang anda butuhkan</p>
             <div class="col-md">
               <button type="button" class="btn-banner" button onclick="location.href = '<?= base_url('auth/register'); ?>';">Register <i class="fas fa-sign-in-alt"></i></>
