@@ -56,8 +56,8 @@
         <h1 class="promo-web">SKIN SAVER</h1>
           <p class="isipromo">Kami siap membantu segala permasalah kulit dan wajah anda , <br> Gabung bersama kami untuk mendapatkan solusi dari segala permasalahan yang anda butuhkan</p>
             <div class="col-md">
-              <button type="button" class="btn-banner">Register <i class="fas fa-sign-in-alt"></i></button>
-              <button type="button" class="btn-banner"><i class="fas fa-user"></i> Login</button>
+              <button type="button" class="btn-banner" button onclick="location.href = '<?= base_url('auth/register'); ?>';">Register <i class="fas fa-sign-in-alt"></i></>
+              <button type="button" class="btn-banner" button onclick="location.href = '<?= base_url('auth'); ?>';"><i class="fas fa-user"></i> Login</button>
             </div>
         </div>
         <div class="col-md-6 text-center">
