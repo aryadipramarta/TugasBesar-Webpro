@@ -53,14 +53,33 @@ body {
   padding-top: 4%;
 }
 .promo-web{
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 70px;
   margin-top: 100px;
+  font-family: 'Cabin', sans-serif;
+}
+.isipromo{
+  font-size: 15px;
 }
 
 .bottom-img{
   width: 100%;
 }
+
+.btn-banner{
+  width: 35%;
+  height: 50px;
+  border-radius: 25px;
+  margin: 1rem 0;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #32be8f,#38d39f,#32be8f);
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-size: 200%;
+}
+
 .body_auth{
   background-color:#26f596;
 }

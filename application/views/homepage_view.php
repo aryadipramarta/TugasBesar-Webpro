@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
   <!-- Custom styles for this template -->
   <link href="<?= base_url('assets/css/style.css') ?> " rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
 
 </head>
 
@@ -51,8 +53,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <p class="promo-web">SKIN SAVER</p>
-          <p>Kami siap membantu segala permasalah kulit dan wajah anda</p>
+        <h1 class="promo-web">SKIN SAVER</h1>
+          <p class="isipromo">Kami siap membantu segala permasalah kulit dan wajah anda , <br> Gabung bersama kami untuk mendapatkan solusi dari segala permasalahan yang anda butuhkan</p>
+            <div class="col-md">
+              <button type="button" class="btn-banner">Register <i class="fas fa-sign-in-alt"></i></button>
+              <button type="button" class="btn-banner"><i class="fas fa-user"></i> Login</button>
+            </div>
         </div>
         <div class="col-md-6 text-center">
           <img src="<?= base_url('assets/image/3568982.png')?>" alt="" class="img-fluid">
