@@ -4,13 +4,12 @@
     z-index: 10;
   }
 .navbar{
-  background-image: linear-gradient(to left, #0499f2 0%, #26f596 74%);  
+  background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);    
 }
 
 .navbar-brand{
   padding-left: 190px;
-  font-size: 40px;
-  width: 500px;
+  font-size: 25px;
   color: #fff !important;
 }
 .navbar-nav li{
@@ -31,7 +30,7 @@
 
 /*banner-section*/
 #banner{
-  background-image: linear-gradient(to left, #0499f2 0%, #26f596 74%);
+  background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);  
   color: #fff;
   padding-top: 4%;
 }
@@ -41,7 +40,9 @@
   font-family: 'Cabin', sans-serif;
 }
 .banner-img{
-  height: 160px;
+  width: 300px;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .bottom-img{
@@ -86,10 +87,14 @@
   padding: 5px;
   margin-top: 25px;
   text-transform: uppercase;
+  color:#46B2CF;
+}
+.title{
+  color:#46B2CF;
 }
 .title::after{
   content: '';
-  background-image: linear-gradient(to right, #32be8f,#38d39f,#32be8f);
+  background:#A5E6CD;
   height: 5px;
   width: 200px;
   margin-left: auto;
@@ -118,7 +123,7 @@
 /*---footer---*/
 
 #footer{
-  background-image: linear-gradient(to left, #0499f2 0%, #26f596 74%);
+  background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);  
   color: #fff;
 }
 
@@ -126,9 +131,9 @@
   width: 100%;
 }
 
-.footer-box img{
-  width: 120px;
-  margin-bottom: 20px;
+.img-footerbox{
+  width: 140px;
+  margin-bottom: 10px;
 }
 .footer-box{
   padding: 20px;
@@ -154,7 +159,7 @@
   border: none;
   border-radius: 0;
   margin-top: 30px;
-  background-image: linear-gradient(to left, #0499f2 0%, #26f596 74%);
+  background-image: linear-gradient(to right, #32be8f,#38d39f,#32be8f);
 }
 
 .copyright{
@@ -163,7 +168,11 @@
   text-align: center;
 
 }
+/*--------------------------batashomepage--------------------------------*/
 
+/*-----------------------------------------------------------------------*/
+
+/*-----------------------------login------------------------------------*/
 .body_auth{
   background-color:#26f596;
 }

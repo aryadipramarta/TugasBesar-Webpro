@@ -36,13 +36,13 @@
           <a class="nav-link" href="#">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">LINK</a>
+          <a class="nav-link" href="#">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SERVICE</a>
+          <a class="nav-link" href="#">CONTACT</a>
         </li>      
         <li class="nav-item">
-          <a class="nav-link" href="#">ABOUT US</a>
+          <a class="nav-link" href="#">PRODUCT</a>
         </li>      
       </ul>
     </div>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="col-md-6 text-center">
-          <img src="<?= base_url('assets/image/3568982.png')?>" alt="" class="img-fluid">
+          <img src="<?= base_url('assets/image/bannerdoctor.png')?>" alt="" class="img-fluid">
         </div>
       </div>
     </div>
@@ -74,13 +74,13 @@
     <h1 class="title">LAYANAN KAMI</h1>
     <div class="row text-center">
       <div class="col-md services">
-        <img src="<?= base_url('assets/image/product.png')?>" class="service-img">
+        <img src="<?= base_url('assets/image/products.png')?>" class="service-img">
         <h4><b>PRODUCT</b></h4>
         <p>Kami menyediakan produk unggulan yang bisa membantu customer dalam menyembuhkan 
            segala permasalahan kulit mereka</p>
       </div>
       <div class="col-md services">
-        <img src="<?= base_url('assets/image/doctor.png')?>" class="service-img">
+        <img src="<?= base_url('assets/image/doctors.png')?>" class="service-img">
         <h4><b>DOKTER</b></h4>
         <p>Kami juga menyediakan pelayan dokter terbaik yang berasal dari seluruh indonesi
           yang siap membantu melayani anda di dalam menyelesaikan masalah masalah yang anda butuhkan
@@ -97,21 +97,21 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+            <img class="img-fluid rounded-circle mb-3" src="" alt="">
             <h5>Stephanie Putri</h5>
             <p class="font-weight-light mb-0">"Mantap! saya senang dengan ini semua"</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+            <img class="img-fluid rounded-circle mb-3" src="" alt="">
             <h5>Jessica Monica</h5>
             <p class="font-weight-light mb-0">"Kualitas terpercaya dan layanan yang sangat memuaskan dari skinsaver"</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+            <img class="img-fluid rounded-circle mb-3" src="" alt="">
             <h5>Johnson A.</h5>
             <p class="font-weight-light mb-0">"Sudah beberapa kali saya melakukan pemesanan dan pemeriksaan disini sangat terpercaya dan hasilnya mantap"</p>
           </div>
@@ -127,7 +127,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 footer-box">
-          <img src="<?= base_url('assets/image/logo.png')?>" class="footer-img">
+          <img src="<?= base_url('assets/image/logo.png')?>" class="img-footerbox">
           <p>SkinSaver merupakan Klinik Kecantikan yang mempunyai nama dan sudah 
             terkenal dikalangan masyarakat umum.</p>
         </div>
@@ -138,7 +138,8 @@
           <p><i class="fa fa-envelope"></i> skinsaver@company.com</p>
         </div>
         <div class="col-md-4 footer-box">
-          <h4><b>SUBSCRIBE NEWSLATTER</b></h4>
+          <img src="<?= base_url('assets/image/updatedfooter.png')?>" class="img-footerbox">
+          <h4><b>SUBSCRIBE NEWSLETTER</b></h4>
           <input type="email" class="form-control" placeholder="Your Email">
           <button type="button" class="btn btn-primary">Subscribe</button>
         </div>
