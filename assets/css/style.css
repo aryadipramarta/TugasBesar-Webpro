@@ -166,15 +166,18 @@
   margin-bottom: 0;
   padding-bottom: 20px;
   text-align: center;
-
 }
 /*--------------------------batashomepage--------------------------------*/
 
 /*-----------------------------------------------------------------------*/
 
 /*-----------------------------login------------------------------------*/
-.body_auth{
-  background-color:#26f596;
+
+.headers-auth{
+  background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);
+}
+.footer-auth{
+  background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);  
 }
 .btn_login{
   padding: 10px 250px;

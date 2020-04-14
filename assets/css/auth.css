@@ -1,0 +1,90 @@
+.headers-auth{
+    background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);
+  }
+  .footer-auth{
+    background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);  
+  }
+  
+.btn_login{
+    height: 40px;
+    cursor: pointer;
+    background-color: #46B2CF;
+    border-radius: 4px;
+    width: 100%;
+  }
+  .btn_login:hover {background-color: #A5E6CD}
+  
+  .btn_login:active {
+    background-color: #A5E6CD;
+    transform: translateY(4px);
+  }
+  .bottom-img{
+    width: 100%;
+  }
+  .footer-img{
+      width: 100%;
+  }
+  .img-login{
+      width: 400px;
+  }
+  .fas{
+    font-size: 25px;
+    height: 35px;
+    width: 35px;
+    margin-top: 5px;
+    color: #46B2CF;
+  }
+  .title-login{
+      color: #46B2CF;
+  }
+  .form-login{
+      width: 300px;
+      margin-bottom: 20px;
+      padding: 5px; 
+      border: none;
+      border-bottom: 3px solid  #46b2cf;
+  }
+
+  .form-login:hover{
+    border-bottom: 3px solid  #46b2cf;
+  }
+  .copyright{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .img-footerbox{
+    width: 190px;
+    margin-bottom: 10px;
+  }
+  .acc_link{
+    color: #46b2cf;
+    font-size: 18px;
+  }
+  .acc_link:hover{
+    color: #46b2cf;
+  }
+  .acc_link:active{
+    color: #46b2cf;
+  }
+  .pass_link{
+    color: #46b2cf;
+    font-size: 18px;
+  }
+  .pass_link:hover{
+    color: #46B2CF;
+  }
+  .pass_link:active{
+    color: #46B2CF;
+  }
+  .reg_link{
+    color: #46B2CF;
+    font-size: small;
+  }
+  .reg_link:hover{
+    color: #46B2CF;
+  }
+  .reg_link:active{
+    color: #46B2CF;
+  }
