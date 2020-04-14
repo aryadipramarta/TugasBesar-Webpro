@@ -33,6 +33,7 @@ class authModel extends CI_Model
     }
     public function get_profile($profile)
     {
-        $result = $this->db->get_where('user', ['username' => $profile]);
+        $result = $this->db->get_where('user', ['username' => $profile])->result();
+        if (!$result) return false;
     }
 }
