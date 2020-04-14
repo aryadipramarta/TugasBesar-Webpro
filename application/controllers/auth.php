@@ -25,7 +25,12 @@ class auth extends CI_Controller
             $data['password'] = $this->input->post('password');
             $result = $this->authModel->login($data);
             if ($result) {
-                redirect('home');
+                $session = $this->session->userdata('username');
+                if (!isset($session)) redirect('auth');
+                $user = $this->authModel->get_profile($session);
+                $this->load->view('user/homepage_view', ['data' => $user]);
+
+                //redirect('home');
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password or Username is wrong!</div>');
                 redirect('auth');
@@ -63,5 +68,12 @@ class auth extends CI_Controller
             $this->authModel->createUser();
             redirect('auth', 'refresh');
         }
+    }
+    public function logout()
+    {
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('role_id');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been Logout!</div>');
+        redirect('auth');
     }
 }
