@@ -36,4 +36,22 @@ class authModel extends CI_Model
         $result = $this->db->get_where('user', ['username' => $profile])->result();
         if (!$result) return false;
     }
+    public function editUser($username)
+    {
+        $data = [
+            'name' => htmlspecialchars($this->input->post('name', true)),
+            'username' => htmlspecialchars($this->input->post('username', true)),
+            'email' => htmlspecialchars($this->input->post('email', true)),
+            'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT),
+            'role_id' => 2
+        ];
+        $this->db->where('username', $username);
+        $this->db->update('user', $data);
+    }
+    public function deleteUser($username)
+    {
+        $this->db->where('username', $username);
+        $this->db->delete('user');
+        //$this->session->unset_userdata()
+    }
 }

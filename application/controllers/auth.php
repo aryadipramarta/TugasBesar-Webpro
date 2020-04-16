@@ -76,4 +76,22 @@ class auth extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been Logout!</div>');
         redirect('auth');
     }
+    public function editUser()
+    {
+        $this->form_validation->set_rules('username', 'Username', 'required|trim');
+        $this->form_validation->set_rules('password', 'Password', 'required|trim');
+        if ($this->form_validation->run() == false) {
+
+            $data['title'] = 'SkinSaver-Edit Profile';
+        } else {
+        }
+    }
+    public function deleteUser()
+    {
+        $username = $this->session->userdata('username');
+        $this->authModel->deleteUser($username);
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('role_id');
+        redirect('home');
+    }
 }

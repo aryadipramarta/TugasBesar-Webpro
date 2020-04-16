@@ -24,71 +24,70 @@
 
   <!-- Navigation -->
   <section id="nav-bar">
-  <nav class="navbar navbar-expand-lg navbar-light">
-     <h1 class="navbar-brand">SKIN SAVER</h1>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">HOME</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ABOUT US</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">CONTACT</a>
-        </li>      
-        <li class="nav-item">
-          <a class="nav-link" href="#">PRODUCT</a>
-        </li>      
-      </ul>
-    </div>
-  </nav>
-</section>
-  <!-- jumbotron -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <h1 class="navbar-brand">SKIN SAVER</h1>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PRODUCT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section> <!-- jumbotron -->
   <section id="banner">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-        <img src="<?= base_url('assets/image/logo.png')?>" class="banner-img">
+          <img src="<?= base_url('assets/image/logo.png') ?>" class="banner-img">
           <p class="isipromo">Kami siap membantu segala permasalah kulit dan wajah anda , <br> Gabung bersama kami untuk mendapatkan solusi dari segala permasalahan yang anda butuhkan</p>
-            <div class="col-md">
-              <button type="button" class="btn-banner" button onclick="location.href = '<?= base_url('auth/register'); ?>';">Register <i class="fas fa-sign-in-alt"></i></>
+          <div class="col-md">
+            <button type="button" class="btn-banner" button onclick="location.href = '<?= base_url('auth/register'); ?>';">Register <i class="fas fa-sign-in-alt"></i></>
               <button type="button" class="btn-banner" button onclick="location.href = '<?= base_url('auth'); ?>';"><i class="fas fa-user"></i> Login</button>
-            </div>
+          </div>
         </div>
         <div class="col-md-6 text-center">
-          <img src="<?= base_url('assets/image/bannerdoctor.png')?>" alt="" class="img-fluid">
+          <img src="<?= base_url('assets/image/bannerdoctor.png') ?>" alt="" class="img-fluid">
         </div>
       </div>
     </div>
-    <img src="<?= base_url('assets/image/wave1.png')?>" class="bottom-img">
+    <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
   </section>
 
-<!--Service-->
-<section class="services">
-  <div class="container text-center">
-    <h1 class="title">LAYANAN KAMI</h1>
-    <div class="row text-center">
-      <div class="col-md services">
-        <img src="<?= base_url('assets/image/products.png')?>" class="service-img">
-        <h4><b>PRODUCT</b></h4>
-        <p>Kami menyediakan produk unggulan yang bisa membantu customer dalam menyembuhkan 
-           segala permasalahan kulit mereka</p>
-      </div>
-      <div class="col-md services">
-        <img src="<?= base_url('assets/image/doctors.png')?>" class="service-img">
-        <h4><b>DOKTER</b></h4>
-        <p>Kami juga menyediakan pelayan dokter terbaik yang berasal dari seluruh indonesi
-          yang siap membantu melayani anda di dalam menyelesaikan masalah masalah yang anda butuhkan
-        </p>
+  <!--Service-->
+  <section class="services">
+    <div class="container text-center">
+      <h1 class="title">LAYANAN KAMI</h1>
+      <div class="row text-center">
+        <div class="col-md services">
+          <img src="<?= base_url('assets/image/products.png') ?>" class="service-img">
+          <h4><b>PRODUCT</b></h4>
+          <p>Kami menyediakan produk unggulan yang bisa membantu customer dalam menyembuhkan
+            segala permasalahan kulit mereka</p>
+        </div>
+        <div class="col-md services">
+          <img src="<?= base_url('assets/image/doctors.png') ?>" class="service-img">
+          <h4><b>DOKTER</b></h4>
+          <p>Kami juga menyediakan pelayan dokter terbaik yang berasal dari seluruh indonesi
+            yang siap membantu melayani anda di dalam menyelesaikan masalah masalah yang anda butuhkan
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Testimonials -->
   <section class="testimonials text-center">
@@ -121,14 +120,14 @@
   </section>
 
 
-   <!-- Footer -->
-   <section id="footer">
-    <img src="<?= base_url('assets/image/footers.png')?>" class="footer-img">
+  <!-- Footer -->
+  <section id="footer">
+    <img src="<?= base_url('assets/image/footers.png') ?>" class="footer-img">
     <div class="container">
       <div class="row">
         <div class="col-md-4 footer-box">
-          <img src="<?= base_url('assets/image/logo.png')?>" class="img-footerbox">
-          <p>SkinSaver merupakan Klinik Kecantikan yang mempunyai nama dan sudah 
+          <img src="<?= base_url('assets/image/logo.png') ?>" class="img-footerbox">
+          <p>SkinSaver merupakan Klinik Kecantikan yang mempunyai nama dan sudah
             terkenal dikalangan masyarakat umum.</p>
         </div>
         <div class="col-md-4 footer-box">
@@ -138,7 +137,7 @@
           <p><i class="fa fa-envelope"></i> skinsaver@company.com</p>
         </div>
         <div class="col-md-4 footer-box">
-          <img src="<?= base_url('assets/image/updatedfooter.png')?>" class="img-footerbox">
+          <img src="<?= base_url('assets/image/updatedfooter.png') ?>" class="img-footerbox">
           <h4><b>SUBSCRIBE NEWSLETTER</b></h4>
           <input type="email" class="form-control" placeholder="Your Email">
           <button type="button" class="btn btn-primary">Subscribe</button>
@@ -150,8 +149,8 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 
