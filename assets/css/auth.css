@@ -11,6 +11,7 @@
     background-color: #46B2CF;
     border-radius: 4px;
     width: 100%;
+    color: #ffffff;
   }
   .btn_login:hover {background-color: #A5E6CD}
   
@@ -88,3 +89,6 @@
   .reg_link:active{
     color: #46B2CF;
   }
+  
+
+  

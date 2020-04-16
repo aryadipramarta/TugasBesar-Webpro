@@ -1,0 +1,41 @@
+.register-form{
+    border: none;
+    border-bottom: 2px solid #46b2cf;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.btn_register{
+    height: 50px;
+    cursor: pointer;
+    background-color: #46B2CF;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+}
+.btn_register:hover {background-color: #A5E6CD}
+  
+.btn_register:active {
+    background-color: #A5E6CD;
+    transform: translateY(4px);
+  }
+
+.title-register{
+    font-size: 30px;
+    color: #46b2cf;
+    font-weight: bold;
+}
+.img-register{
+    width: 400px;
+}
+.reg_link{
+    color: #46B2CF;
+    font-size: medium;
+  }
+  .reg_link:hover{
+    color: #46B2CF;
+  }
+  .reg_link:active{
+    color: #46B2CF;
+  }
