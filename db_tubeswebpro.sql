@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2020 at 01:13 PM
+-- Generation Time: Apr 17, 2020 at 01:25 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -25,21 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pasien`
---
-
-CREATE TABLE `pasien` (
-  `id_pasien` int(10) NOT NULL,
-  `full_name` varchar(100) NOT NULL,
-  `alamat` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `password` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `produk`
 --
 
@@ -48,7 +33,7 @@ CREATE TABLE `produk` (
   `tipe_produk` varchar(20) NOT NULL,
   `nama_produk` varchar(100) NOT NULL,
   `harga` int(100) NOT NULL,
-  `deskripsi` varchar(100) NOT NULL
+  `deskripsi` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -111,12 +96,6 @@ INSERT INTO `user_role` (`role_id`, `role`) VALUES
 --
 
 --
--- Indexes for table `pasien`
---
-ALTER TABLE `pasien`
-  ADD PRIMARY KEY (`id_pasien`);
-
---
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
@@ -137,12 +116,6 @@ ALTER TABLE `user_role`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `pasien`
---
-ALTER TABLE `pasien`
-  MODIFY `id_pasien` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produk`
