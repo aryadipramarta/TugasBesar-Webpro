@@ -40,7 +40,7 @@
   font-family: 'Cabin', sans-serif;
 }
 .banner-img{
-  width: 300px;
+  width: 500px;
   padding-top: 50px;
   padding-bottom: 20px;
 }
@@ -167,71 +167,7 @@
   padding-bottom: 20px;
   text-align: center;
 }
+.about-banner{
+  width: 500px;
+}
 /*--------------------------batashomepage--------------------------------*/
-
-/*-----------------------------------------------------------------------*/
-
-/*-----------------------------login------------------------------------*/
-
-.headers-auth{
-  background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);
-}
-.footer-auth{
-  background-image: linear-gradient(to left, #abe9cd 0%, #3eadcf 74%);  
-}
-.btn_login{
-  padding: 10px 250px;
-  cursor: pointer;
-  background-color: #26f596;
-  border-radius: 6px;
-}
-.btn_login:hover {background-color: #2fc47e}
-
-.btn_login:active {
-  background-color: #2fc47e;
-  transform: translateY(4px);
-}
-.btn_register{
-  padding: 4px 202px;
-  cursor: pointer;
-  font-size: 15px;
-  background-color: #26f596;
-  border-radius: 6px;
-}
-.btn_register:hover {background-color: #2fc47e}
-
-.btn_register:active {
-  background-color: #2fc47e;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.acc_link{
-  color: #2fc47e;
-  font-size: small;
-}
-.acc_link:hover{
-  color: #2fc47e;
-}
-.acc_link:active{
-  color: #2fc47e;
-}
-.pass_link{
-  color: #2fc47e;
-  font-size: small;
-}
-.pass_link:hover{
-  color: #2fc47e;
-}
-.pass_link:active{
-  color: #2fc47e;
-}
-.reg_link{
-  color: #2fc47e;
-  font-size: small;
-}
-.reg_link:hover{
-  color: #2fc47e;
-}
-.reg_link:active{
-  color: #2fc47e;
-}
