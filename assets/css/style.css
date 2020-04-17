@@ -120,6 +120,22 @@
   box-shadow: 0px 5px 5px 0px #adb5bd;
 }
 
+/*products*/
+#product{
+  padding: 80px;
+}
+.products{
+  padding: 20px;
+  font-family: 'Cabin', sans-serif;
+}
+.product-card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
 /*footer*/
 /*---footer---*/
 

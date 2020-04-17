@@ -72,10 +72,26 @@
       <h2 class="isibanneruser"><b>OUR PRODUCT</b></h2>
     </div>
     <div class="d-flex justify-content-center">
-        <br>
-        <img src="<?= base_url('assets/image/productpage.png') ?>" class="about-banner">
-      </div>
-    <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
+        <div class="row text-center">
+          <div class="col">
+            <img src="<?= base_url('assets/image/facewash1.png') ?>" class="product-card">
+          </div>
+          <div class="col">
+            <img src="<?= base_url('assets/image/facewash2.png') ?>" class="product-card">
+          </div>                
+          <div class="col">
+            <img src="<?= base_url('assets/image/moist1.png') ?>" class="product-card">
+          </div>
+          <div class="col">
+            <img src="<?= base_url('assets/image/moist2.png') ?>" class="product-card">
+          </div>
+            <div class="col">
+               <img src="<?= base_url('assets/image/acnespot.png') ?>" class="product-card">
+            </div>
+              <img src="<?= base_url('assets/image/serum.png') ?>" class="product-card">
+          </div>
+        </div>
+</div>
   </section>
 
   <!--Service-->

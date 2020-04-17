@@ -1,0 +1,52 @@
+{
+    "produk": [
+    {
+        "id": "1",
+        "tipe_produk": "Facewash",
+        "nama_produk": "SkinSaver Gentle Skin Cleanser",
+        "harga": "Rp 75.000",
+        "deskripsi": "produk ini adalah produk andalan kami yang terbukti sangat cocok untuk membersihkan jerawat.",
+        "gambar": "facewash1.png"
+    },
+    {
+        "id": "2",
+        "tipe_produk": "Facewash",
+        "nama_produk": "SkinSaver Cleanser",
+        "harga": "Rp 80.000",
+        "deskripsi": "produk yang sangat baik mengandung 2% Benzoyl Peroxide dan eskrak buah lainnya.",
+        "gambar": "facewash2.png"
+    },
+    {
+        "id": "3",
+        "tipe_produk": "Moisturizer",
+        "nama_produk": "SkinSaver Barrier Moisturizer",
+        "harga": "Rp 100.000",
+        "deskripsi": "melembabkan kulit sangat cocok untuk kulit berjerawat mengandung Ceramide.",
+        "gambar": "moist1.png"
+    },
+    {
+        "id": "4",
+        "tipe_produk": "Moisturizer",
+        "nama_produk": "SkinSaver LightDay Moisturizer",
+        "harga": "Rp 120.000",
+        "deskripsi": "melembabkan kulit sangat baik, cocok segala jenis kulit mengandung SPF 50+/PA++++",
+        "gambar": "moist2.png"
+    },
+    {
+        "id": "5",
+        "tipe_produk": "Acne Spot",
+        "nama_produk": "Skinsaver Acne Spot treatment",
+        "harga": "Rp 60.000",
+        "deskripsi": "produk terbaik untuk jerawat dengan 2.5% Benzoyl Peroxide",
+        "gambar": "acnespot.png"
+    },
+    {
+        "id": "6",
+        "tipe_produk": "Serum",
+        "nama_produk": "SkinSaver Niacinamide and Zink Serum",
+        "harga": "Rp 140.000",
+        "deskripsi": "serum terbaik untuk jerawat anda, mengandung Niacinamide 10% and Zink 1%",
+        "gambar": "serum.png"
+    }
+    ]
+}
