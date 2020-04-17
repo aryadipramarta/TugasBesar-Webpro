@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2020 at 01:25 PM
+-- Generation Time: Apr 17, 2020 at 01:53 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -47,6 +47,19 @@ INSERT INTO `produk` (`id`, `tipe_produk`, `nama_produk`, `harga`, `deskripsi`) 
 (4, 'Moisturizer', 'SkinSaver LightDay Moisturizer', 120000, 'melembabkan kulit sangat baik, cocok segala jenis kulit mengandung SPF 50+/PA++++'),
 (5, 'Acne Spot', 'SkinSaver Acne Spot treatment', 60000, 'produk terbaik untuk jerawat dengan 2.5% Benzoyl Peroxide'),
 (6, 'Serum', 'SkinSaver Niacinamide and Zink Serum', 140000, 'serum terbaik untuk jerawat anda, mengandung Niacinamide 10% and Zink 1%');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE `service` (
+  `id_service` int(5) NOT NULL,
+  `nama_service` varchar(200) NOT NULL,
+  `deskripsi` varchar(500) NOT NULL,
+  `harga` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -102,6 +115,12 @@ ALTER TABLE `produk`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`id_service`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -122,6 +141,12 @@ ALTER TABLE `user_role`
 --
 ALTER TABLE `produk`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `service`
+--
+ALTER TABLE `service`
+  MODIFY `id_service` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
