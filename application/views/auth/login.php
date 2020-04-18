@@ -14,7 +14,6 @@
                                 <form class="user" method="post" action="<?= base_url('auth') ?>">
                                     <div class="d-flex justify-content-center">
                                         <i class="fas fa-user"></i>
-                                        <?= $this->session->flashdata('message');  ?>
                                         <input type="text" class="form-login" placeholder="Username" name="username" id="username" value="<?= set_value('username'); ?>">
                                         <small class="text-danger">
                                             <?= form_error('username');  ?>
@@ -27,6 +26,7 @@
                                             <?= form_error('password');  ?>
                                         </small>
                                     </div>
+                                    <?= $this->session->flashdata('message');  ?>
                                     <button type="submit" class="btn_login justify-content-center">
                                         Login
                                     </button>

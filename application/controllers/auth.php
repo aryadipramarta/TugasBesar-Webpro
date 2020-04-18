@@ -28,8 +28,8 @@ class auth extends CI_Controller
                 $session = $this->session->userdata('username');
                 if (!isset($session)) redirect('auth');
                 $user = $this->authModel->get_profile($session);
-                $this->load->view('user/homepage_view', ['data' => $user]);
-
+                $this->load->view('user/customer/home_customer', ['data' => $user]);
+                
                 //redirect('home');
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password or Username is wrong!</div>');
