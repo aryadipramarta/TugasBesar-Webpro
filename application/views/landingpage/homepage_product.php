@@ -87,17 +87,20 @@
             <br>
             <img src="<?= base_url('assets/image/facewash1.png') ?>" class="gambarproduct">
             <p>Produk ini adalah produk andalan kami yang terbukti sangat cocok untuk membersihkan jerawat</p>
+            <h5>Rp 75.000</h5>
           </div>
           <div class="col product-card">
             <h2 class="judulproduct"><b>SkinSaver Cleanser</b></h2>
             <br>
             <img src="<?= base_url('assets/image/facewash2.png') ?>" class="gambarproduct">
             <p>Produk yang sangat baik mengandung 2% Benzoyl Peroxide dan eskrak buah lainnya</p>
+            <h5>Rp 80.000</h5>
           </div>                
           <div class="col product-card">
             <h2 class="judulproduct"><b>SkinSaver Barrier Moisturizer</b></h2>
             <img src="<?= base_url('assets/image/moist1.png') ?>" class="gambarproduct">
             <p>Melembabkan kulit sangat cocok untuk kulit berjerawat mengandung Ceramide</p>
+            <h5>Rp 100.000</h5>
           </div>
       </div>
 </div>
@@ -107,17 +110,20 @@
           <h2 class="judulproduct"><b>SkinSaver LightDay Moisturizer</b></h2>
             <img src="<?= base_url('assets/image/moist2.png') ?>" class="gambarproduct">
             <p>Melembabkan kulit sangat baik, cocok segala jenis kulit mengandung SPF 50+/PA++++</p>
+            <h5>Rp 120.000</h5>
           </div>
           <div class="col product-card">
           <h2 class="judulproduct"><b>Skinsaver Acne Spot treatment</b></h2>
           <br>
             <img src="<?= base_url('assets/image/acnespot.png') ?>" class="gambarproduct">
             <p>Produk terbaik untuk jerawat dengan 2.5% Benzoyl Peroxide</p>
+            <h5>Rp 60.000</h5>
           </div>                
           <div class="col product-card">
           <h2 class="judulproduct"><b>SkinSaver Niacinamide and Zink Serum</b></h2>
             <img src="<?= base_url('assets/image/serum.png') ?>" class="gambarproduct">
             <p>Serum terbaik untuk jerawat anda, mengandung Niacinamide 10% and Zink 1%</p>
+            <h5>Rp 140.000</h5>
           </div>
       </div>
 </div>
