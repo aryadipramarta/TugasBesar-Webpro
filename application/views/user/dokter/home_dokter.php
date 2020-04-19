@@ -59,7 +59,7 @@
                   suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
                   aliquid, eos in dolore mollitia laborum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic voluptatibus quia
                   suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
-                  aliquid, eos in dolore mollitia laborum.</p>
+                  aliquid.</p>
               </div>
             </div>  
           </div>
