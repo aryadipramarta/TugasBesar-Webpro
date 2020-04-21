@@ -12,16 +12,21 @@
 </section>
 
 <!--Service-->
+<?php
+$data = file_get_contents('assets/image/produk.json');
+$produk = json_decode($data, true);
+$produk = $produk["produk"];
+?>
 <section class="services">
   <div class="d-flex justify-content-center">
-    <?php foreach ($data as $d) : ?>
       <div class="row text-center">
+      <?php foreach ($produk as $d) : ?>
         <div class="col product-card">
-          <h2 class="judulproduct"><b><?= $d->nama_produk ?></b></h2>
           <br>
-          <img src="<?= base_url('assets/image/') . $d->produk_img ?>" class="gambarproduct">
-          <p><?= $d->deskripsi; ?></p>
-          <h5><?= $d->harga ?></h5>
+          <h5><?= $d["tipe_produk"];?></h5>
+          <img src="<?=base_url('assets/image/')?><?=$d["gambar"]?>"class="gambarproduct">
+          <p><?=$d["deskripsi"]; ?></p>
+          <h5><?= $d["harga"];?></h5>
         </div>
       </div>
     <?php endforeach; ?>
