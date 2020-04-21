@@ -9,7 +9,7 @@ class pasien extends CI_Controller
         if (!isset($session)) redirect('auth');
         $this->load->model('authModel');
         $user = $this->authModel->get_profile($session);
-        $this->load->view('user/customer/home_customer', ['data' => $user]);
+        $this->load->view('user/pasien/home_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
     public function produk()
@@ -18,7 +18,7 @@ class pasien extends CI_Controller
         //if (!isset($session)) redirect('auth');
         $this->load->model('authModel');
         $user = $this->authModel->get_profile($session);
-        $this->load->view('user/customer/pesanproduct_customer', ['data' => $user]);
+        $this->load->view('user/pasien/pesanproduct_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
     public function service()
@@ -27,7 +27,7 @@ class pasien extends CI_Controller
         //if (!isset($session)) redirect('auth');
         $this->load->model('authModel');
         $user = $this->authModel->get_profile($session);
-        $this->load->view('user/customer/pesanservice_customer', ['data' => $user]);
+        $this->load->view('user/pasien/pesanservice_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
     public function profile()
@@ -36,7 +36,7 @@ class pasien extends CI_Controller
         //if (!isset($session)) redirect('auth');
         $this->load->model('authModel');
         $user = $this->authModel->get_profile($session);
-        $this->load->view('user/customer/editprofile_customer', ['data' => $user]);
+        $this->load->view('user/pasien/editprofile_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
 }

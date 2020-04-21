@@ -41,13 +41,13 @@
               <a class="nav-link" href="<?php echo base_url('pasien/produk'); ?>">PESAN PRODUCT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>home/contact">PESAN SERVICE</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">PESAN SERVICE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url(); ?>home/product">EDIT PROFILE</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">EDIT PROFILE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">LOGOUT</a>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@
     </div>
     <div class="d-flex justify-content-center">
       <br>
-      <h2 class="isibanneruser"><b>WELCOME, <?= $d->name ?> </b></h2>
+      <h2 class="isibanneruser"><b>Welcome, <?= $d->name ?> </b></h2>
     </div>
     <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
   <?php endforeach; ?>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2020 at 01:53 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Generation Time: Apr 21, 2020 at 05:27 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_tubeswebpro`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pemesanan`
+--
+
+CREATE TABLE `pemesanan` (
+  `idpemesanan` int(5) NOT NULL,
+  `idproduk` int(5) NOT NULL,
+  `iduser` int(11) NOT NULL,
+  `jumlahpesanan` int(11) NOT NULL,
+  `alamat` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pesanservice`
+--
+
+CREATE TABLE `pesanservice` (
+  `idpesanservice` int(5) NOT NULL,
+  `iddokter` int(11) NOT NULL,
+  `idpasien` int(11) NOT NULL,
+  `idservice` int(5) NOT NULL,
+  `bookingdate` date NOT NULL,
+  `keluhan` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -83,7 +112,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `name`, `username`, `email`, `password`, `role_id`) VALUES
 (1, 'Faishal Raihan', 'redxx', 'faishalraihan73@gmail.com', '$2y$10$X6c5LBy0TxMn/TVIq3UvAO65X/QeEXxC73OLwfSqRq.rmcVPm4u2q', 2),
 (2, 'Saipul Jamil', 'haphaphap', 'saipulhap@gmail.com', '$2y$10$evOcqxEDUYGVzInIl8wrLeVG2ZmU6O628/5M1qoswds76JjcadGGm', 2),
-(3, 'Panjul Jukipli', 'Panjulll', 'panjul@gmail.com', '$2y$10$JifpR/ioi.cdOSyAWlduRukcc/Y616B/gz7m60oRBTNxgufr2qA.m', 2);
+(3, 'Panjul Jukipli', 'Panjulll', 'panjul@gmail.com', '$2y$10$JifpR/ioi.cdOSyAWlduRukcc/Y616B/gz7m60oRBTNxgufr2qA.m', 2),
+(4, 'I Komang Gede Aryadi Pramarta', 'aryadip', 'aryadipramarta9@gmail.com', '$2y$10$UTrLkMHP.oDlPT7DEs6xGuFCydrIGGXQaEMvy9poNqojCcO7x2qsm', 2);
 
 -- --------------------------------------------------------
 
@@ -107,6 +137,23 @@ INSERT INTO `user_role` (`role_id`, `role`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `pemesanan`
+--
+ALTER TABLE `pemesanan`
+  ADD PRIMARY KEY (`idpemesanan`),
+  ADD KEY `fk_pemesanan1` (`iduser`),
+  ADD KEY `fk_pemesanan2` (`idproduk`);
+
+--
+-- Indexes for table `pesanservice`
+--
+ALTER TABLE `pesanservice`
+  ADD PRIMARY KEY (`idpesanservice`),
+  ADD KEY `fk_pesanservice1` (`idservice`),
+  ADD KEY `fk_pesanservice2` (`iddokter`),
+  ADD KEY `fk_pesanservice3` (`idpasien`);
 
 --
 -- Indexes for table `produk`
@@ -137,28 +184,47 @@ ALTER TABLE `user_role`
 --
 
 --
--- AUTO_INCREMENT for table `produk`
+-- AUTO_INCREMENT for table `pemesanan`
 --
-ALTER TABLE `produk`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `pemesanan`
+  MODIFY `idpemesanan` int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `service`
+-- AUTO_INCREMENT for table `pesanservice`
 --
-ALTER TABLE `service`
-  MODIFY `id_service` int(5) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `pesanservice`
+  MODIFY `idpesanservice` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
   MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `pemesanan`
+--
+ALTER TABLE `pemesanan`
+  ADD CONSTRAINT `fk_pemesanan1` FOREIGN KEY (`iduser`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `fk_pemesanan2` FOREIGN KEY (`idproduk`) REFERENCES `produk` (`id`);
+
+--
+-- Constraints for table `pesanservice`
+--
+ALTER TABLE `pesanservice`
+  ADD CONSTRAINT `fk_pesanservice1` FOREIGN KEY (`idservice`) REFERENCES `service` (`id_service`),
+  ADD CONSTRAINT `fk_pesanservice2` FOREIGN KEY (`iddokter`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `fk_pesanservice3` FOREIGN KEY (`idpasien`) REFERENCES `user` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

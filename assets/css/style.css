@@ -230,3 +230,58 @@
 .juduliklan{
   color: #46B2CF;
 }
+.cardtable{
+  box-shadow: 0 20px 30px #46B2CF;
+}
+.btnforform{
+  height: 40px;
+  cursor: pointer;
+  background-color: #46B2CF;
+  border-radius: 4px;
+  width: 100%;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.btnforform:hover {background-color: #A5E6CD}
+
+.btnforform:active {
+  background-color: #A5E6CD;
+  transform: translateY(4px);
+}
+.editprofileimg{
+  width: 480px;
+}
+.cardeditprofile{
+  box-shadow: 0 20px 20px #46B2CF;
+  width: 700px;
+  margin-bottom: 30px;
+  border: none;
+}
+.form-group{
+  width: 400px;
+}
+.form-control{
+  width: 400px;
+  margin-bottom: 20px;
+  padding: 5px; 
+  border: none;
+  border-bottom: 3px solid  #46b2cf;
+}
+.juduledit{
+  font-size: 35px;
+  color: #46B2CF;
+}
+.btn_edit{
+  height: 40px;
+  cursor: pointer;
+  background-color: #46B2CF;
+  border-radius: 4px;
+  width: 100%;
+  color: #ffffff;
+}
+.btn_edit:hover {background-color: #A5E6CD}
+
+.btn_edit:active {
+  background-color: #A5E6CD;
+  transform: translateY(4px);
+}
