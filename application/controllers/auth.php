@@ -75,7 +75,9 @@ class auth extends CI_Controller
         $this->session->unset_userdata('username');
         $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been Logout!</div>');
-        redirect('auth');
+        $this->load->view('template/menu_header');
+        $this->load->view('landingpage/homepage_view');
+        $this->load->view('template/menu_footer');
     }
     public function editUser()
     {
