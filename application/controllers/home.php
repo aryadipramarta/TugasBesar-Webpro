@@ -5,7 +5,6 @@ class home extends CI_Controller
 
     public function index()
     {
-
         $this->load->view('template/menu_header');
         $this->load->view('landingpage/homepage_view');
         $this->load->view('template/menu_footer');
