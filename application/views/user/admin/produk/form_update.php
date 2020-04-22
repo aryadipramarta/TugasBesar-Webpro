@@ -14,27 +14,37 @@
     <div class="container">
         <h2>Update Produk</h2>
         <hr>
-        <?= form_open('admin/updateProduk') ?>
+        <?= form_open_multipart('admin/updateProduk/' . $produk['id_produk']) ?>
         <div class="form-group">
             <?= form_label('Nama Produk') ?>
-            <?= form_input(['name' => 'nama_produk', 'class' => 'form-control', 'required' => 'required']) ?>
+            <?= form_input(['name' => 'nama_produk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['nama_produk']]) ?>
         </div>
         <div class="form-group">
             <?= form_label('Kategori') ?>
-            <?= form_input(['name' => 'kategori', 'class' => 'form-control', 'required' => 'required']) ?>
+            <?= form_input(['name' => 'kategori', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['kategori']]) ?>
         </div>
         <div class="form-group">
             <?= form_label('Deskripsi') ?>
-            <?= form_textarea(['name' => 'deskripsi', 'class' => 'form-control', 'rows' => '4', 'required' => 'required']); ?>
+            <?= form_textarea(['name' => 'deskripsi', 'class' => 'form-control', 'rows' => '4', 'required' => 'required', 'value' => $produk['deskripsi']]); ?>
         </div>
         <div class="form-group">
             <?= form_label('Harga') ?>
-            <?= form_input(['name' => 'harga', 'class' => 'form-control', 'type' => 'number', 'required' => 'required']) ?>
+            <?= form_input(['name' => 'harga', 'class' => 'form-control', 'type' => 'number', 'required' => 'required', 'value' => $produk['harga']]) ?>
+        </div>
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" value="<?php $produk['produk_img']; ?>">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+            </div>
         </div>
         <div class="form-group">
             <a href="<?= site_url('admin/produk') ?>" class="btn btn-success">Back</a>
-            <?= form_reset(['value' => 'Reset', 'class' => 'btn btn-info']) ?>
-            <?= form_submit('submit', 'Submit', ['class' => 'btn btn-primary']); ?>
+            <?= form_submit('submit', 'Update', ['class' => 'btn btn-warning']); ?>
         </div>
         <?= form_close() ?>
     </div>

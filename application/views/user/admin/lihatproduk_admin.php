@@ -19,10 +19,14 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="<?= base_url('assets/image/logo.png') ?>">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.10/dist/sweetalert2.min.css">
 </head>
 
 <body>
-
+    <?php if ($this->session->flashdata('info') != NULL) : ?>
+        <?php $info = $this->session->flashdata('info'); ?>
+        <?= '<script> window.onload = function() { swal("' . $info . '"); }; </script>' ?>
+    <?php endif; ?>
     <!-- Navigation -->
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -72,7 +76,7 @@
         $this->table->set_template($template);
         $this->table->set_heading('ID', 'Nama Produk', 'Kategori', 'Deskripsi', 'Harga', 'Image', 'Aksi');
         foreach ($data as $d) {
-            $url = 'TugasBesar-Webpro/admin/deleteProduk/' . $d->id_produk;
+            $url = 'TugasBesar-Webpro/index.php/admin/deleteProduk/' . $d->id_produk;
             $this->table->add_row(
                 $d->id_produk,
                 $d->nama_produk,
