@@ -35,6 +35,7 @@ class authModel extends CI_Model
     {
         $result = $this->db->get_where('user', ['username' => $profile])->result();
         if (!$result) return false;
+        return $result;
     }
     public function editUser($username)
     {

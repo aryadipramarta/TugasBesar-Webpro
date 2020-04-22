@@ -25,11 +25,12 @@ class auth extends CI_Controller
             $data['password'] = $this->input->post('password');
             $result = $this->authModel->login($data);
             if ($result) {
-                $session = $this->session->userdata('username');
-                if (!isset($session)) redirect('auth');
-                $user = $this->authModel->get_profile($session);
-                $this->load->view('user/customer/home_customer', ['data' => $user]);
-                $this->load->view('template/menu_footer');
+                redirect('pasien');
+                // $session = $this->session->userdata('username');
+                // if (!isset($session)) redirect('auth');
+                // $user = $this->authModel->get_profile($session);
+                // $this->load->view('user/customer/home_customer', ['data' => $user]);
+                // $this->load->view('template/menu_footer');
                 //redirect('home');
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password or Username is wrong!</div>');
@@ -74,7 +75,9 @@ class auth extends CI_Controller
         $this->session->unset_userdata('username');
         $this->session->unset_userdata('role_id');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been Logout!</div>');
-        redirect('auth');
+        $this->load->view('template/menu_header');
+        $this->load->view('landingpage/homepage_view');
+        $this->load->view('template/menu_footer');
     }
     public function editUser()
     {
