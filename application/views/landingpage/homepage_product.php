@@ -6,7 +6,7 @@
   </div>
   <div class="d-flex justify-content-center">
     <br>
-    <img src="<?= base_url('assets/image/contact.png') ?>" class="about-banner">
+    <img src="<?= base_url('assets/image/productpage.png') ?>" class="about-banner">
   </div>
   <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
 </section>
@@ -21,9 +21,9 @@ $produk = $produk["produk"];
   <div class="d-flex justify-content-center">
       <div class="row text-center">
       <?php foreach ($produk as $d) : ?>
-        <div class="col product-card">
+        <div class="col-md-auto product-card">
           <br>
-          <h5><?= $d["tipe_produk"];?></h5>
+          <h5><b><?= $d["tipe_produk"];?><b></h5>
           <img src="<?=base_url('assets/image/')?><?=$d["gambar"]?>"class="gambarproduct">
           <p><?=$d["deskripsi"]; ?></p>
           <h5><?= $d["harga"];?></h5>
@@ -31,6 +31,4 @@ $produk = $produk["produk"];
       </div>
     <?php endforeach; ?>
   </div>
-
-
 </section>

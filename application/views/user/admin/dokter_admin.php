@@ -62,7 +62,74 @@
             <h2 class="isibanneruser"><b>ADMIN PAGE</b></h2>
         </div>
         <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
-
     </section>
 
     <!--Service-->
+    <section class="services">
+  <div class="d-flex justify-content-center">
+      <div class="cardtable">
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+          <button type="button" data-target="#tambahdokter" class="btnforform" data-toggle="modal">ADD NEW DOCTOR</button>
+          </div>
+          <div class="d-flex justify-content-center">
+          <h3><b>TABLE DOKTER YANG MELAYANI</b></h3>
+          </div>
+          <div class="d-flex justify-content-center">
+          </div>
+          <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          </table>
+        </div>
+      </div>
+  </div>
+  </section>
+
+  <!---ModalAddDokter--->
+  <div class="modal" tabindex="-1" role="dialog" id="tambahdokter">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">CREATE DOCTOR ACCOUNT</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Nama Lengkap</label>
+        <input type="text" class="form-control" id="namaservice">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Username</label>
+        <input type="text" class="form-control" id="namaservice">
+    </div>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>  
+    <div class="form-group">
+    <label for="exampleFormControlTextarea1">Deskripsi</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="Password">
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
