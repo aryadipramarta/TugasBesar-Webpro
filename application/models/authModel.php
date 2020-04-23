@@ -66,22 +66,24 @@ class authModel extends CI_Model
         ];
         $this->db->insert('user', $data);
     }
-    public function editDokter($username)
+    public function editDokter($id_user, $data)
     {
-        $data = [
-            'name' => htmlspecialchars($this->input->post('name', true)),
-            'username' => htmlspecialchars($this->input->post('username', true)),
-            'email' => htmlspecialchars($this->input->post('email', true)),
-            'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT),
-            'role_id' => 1
-        ];
-        $this->db->where('username', $username);
-        $this->db->update('user', $data);
+
+        $this->db->where('id_user', $id_user);
+        $result = $this->db->update('user', $data);
+        return $result;
     }
-    public function deleteDokter($username)
+    public function deleteDokter($id_user)
     {
-        $this->db->where('username', $username);
-        $this->db->delete('user');
+        $this->db->where('id_user', $id_user);
+        $result = $this->db->delete('user');
+        return $result;
         //$this->session->unset_userdata()
+    }
+    public function getAllDokter($role)
+    {
+        $this->db->where('role_id', $role);
+        $result = $this->db->get('user')->result_array();
+        return $result;
     }
 }
