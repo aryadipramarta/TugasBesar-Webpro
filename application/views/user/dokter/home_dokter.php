@@ -64,8 +64,8 @@
         <div class="col">
           <div class="jumbotron jumbotron-fluid">
             <div class="container text-center">
-              <img src="profileavatar.png" width="25%" class="rounded-circle img-thumbnail">
-              <h1 class="display-4">NAMA DOKTER</h1>
+              <img src="<?= base_url('assets/image/indian.png') ?>" width="50%" class="rounded-circle">
+              <h1 class="display-4">dr. <span><?= $d->name; ?></span></h1>
               <p class="lead">Spesialis Kulit dan Kelamin</p>
               <p class="lead">"Saya siap mendengarkan setiap keluhan anda dan memberikan solusinya"</p>
             </div>
@@ -74,13 +74,14 @@
         <div class="col">
           <div class="row">
             <div class="jumbotron jumbotron-fluid">
-              <div class="container text-left">
+              <div class="container text-center">
                 <h2 class= "text-center">LATAR BELAKANG PENDIDIKAN</h2>
-                <p class="lead mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic voluptatibus quia
-                  suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
-                  aliquid, eos in dolore mollitia laborum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic voluptatibus quia
-                  suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
-                  aliquid.</p>
+                <p class="lead mt-5">Latar belakang pendidikan saya yaitu telah melakukan magang selama 1 tahun di puskesmas daerah,
+                  setelah saya lulus dari fak.Kedokteran UI. Setelah itu saya mengajukan diri untuk bekerja di rumah sakit Mitra Keluarga
+                  Bekasi.Setelah menjadi dokter umum disana selama 1,5 tahun saya memutuskan untuk lanjut kuliah S2. Kebetulan S2 saya
+                  mengambil spesialis kulit dan kelamin, dan alhamdulillah semua berjalan lancar. Setelah itu saya kembali menjadi dokter
+                  spesialis di rs mitra keluarga, dan hingga akhirnya sekarang menjadi Dokter khusus untuk menangani permasalahan
+                  kulit para Customer SkinSaver ini.</p>
               </div>
             </div>  
           </div>
