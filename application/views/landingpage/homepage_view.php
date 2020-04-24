@@ -18,6 +18,52 @@
     <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
   </section>
 
+<section id="carousel">
+  <div class ="container">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="height:525px" >
+            <img src="<?= base_url('assets/image/face.jpg') ?>" class="d-block w-100" id="face" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4" style="margin-top:-300px" >Dapatkan kandungan terbaik dari <br> <span class="font-weight-bold">Niacinamide</span></h1>
+              <h5>Melalui produk kami serum niacinamide</h5>
+              <p>Niacinamide adalah bentuk dari Niacin atau B3 yang berfungsi untuk mengatasi masalah kulit seperti keriput, mempromosikan kesehatan kulit, dan memberikan manfaat anti-inflamasi.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="height:525px">
+            <img src="<?= base_url('assets/image/face2.jpg') ?>"  class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4" id="face" style="color:darkgoldenrod" style="">Dapatkan kandungan terbaik dari <br> <span class="font-weight-bold">Ceramide</span></h1>
+              <h5 style="color:darkgoldenrod">Melalui produk kami barrier moisturizer with ceramide</h5>
+              <p style="color:black;">Ceramide berfungsi untuk memproteksi kulit dan mempertahankan kelembapan kulit. Dibandingkan dengan kolagen dan hyaluronic acid, ceramide mampu mempertahankan kelembapan di bagian terluar lapisan kulit (stratum corneum) lebih lama.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="height:525px">
+            <img src="<?= base_url('assets/image/face3.jpg') ?>"  class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 class="display-4" id="face2" style="color:rgb(65, 45, 57); margin-top:-330px">Dapatkan kandungan terbaik dari <br> <span class="font-weight-bold">Benzoyl Peroxide</span></h1>
+              <h5 style="color:rgb(65, 45, 57)">Melalui produk kami Cleanser dengan 2% Benzoyl Peroxide </h5>
+              <p style= "color:rgb(165, 75, 123)">Benzoyl Peroxide merupakan bahan yang berfungsi mengurangi peradangan, membunuh bakteri penyebab jerawat, dan membuka pori-pori kulit yang tertutup</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!--Service-->
   <section class="services">
     <div class="container text-center">
