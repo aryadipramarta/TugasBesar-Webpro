@@ -26,8 +26,8 @@
   <!-- Navigation -->
   <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <?php foreach ($data as $d) : ?>
-        <h1 class="navbar-brand"><i class="fas fa-user-circle"></i><b> | <?= $d->username; ?> </b></h1>
+      <?php foreach ($user as $d) : ?>
+        <h1 class="navbar-brand"><i class="fas fa-user-circle"></i><b> | <?= $d['username']; ?> </b></h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
@@ -38,10 +38,10 @@
               <a class="nav-link" href="#">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/produk'); ?>">PESAN PRODUCT</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/produk'); ?>">PRODUCT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">PESAN SERVICE</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">SERVICE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">EDIT PROFILE</a>
@@ -61,84 +61,93 @@
 
   </section>
 
- <!--Service-->
- <section class="services">
-  <div class="d-flex justify-content-center">
+  <!--Service-->
+  <section class="services">
+    <div class="d-flex justify-content-center">
       <div class="cardtable">
         <div class="card-body">
           <div class="d-flex justify-content-center">
-          <button type="button" data-target="#addpesanan" class="btnforform" data-toggle="modal">PESAN SERVICE</button>
+            <button type="button" data-target="#addpesanan" class="btnforform" data-toggle="modal">PESAN SERVICE</button>
           </div>
           <div class="d-flex justify-content-center">
-          <h3><b>TABLE PEMESANAN SERVICE</b></h3>
+            <h3><b>TABLE PEMESANAN SERVICE</b></h3>
           </div>
           <div class="d-flex justify-content-center">
-          <h3><b><?= $d->name ?></b></h3>
+            <h3><b><?= $d['name'] ?></b></h3>
           </div>
           <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Nama Dokter</th>
-              <th>Jenis Service</th>
-              <th>Pilih Waktu</th>
-              <th>Biaya</th>
-              <th>Keluhan</th>
-              <th>Action</th>
-            </tr>
-          </thead>
+            <thead>
+              <tr>
+                <th>Nama Dokter</th>
+                <th>Jenis Service</th>
+                <th>Pilih Waktu</th>
+                <th>Biaya</th>
+                <th>Keluhan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($pesanS as $ps) : ?>
+                <tr>
+                  <form action="">
+                    <td><?= $ps['nama_dokter'] ?></td>
+                    <td><?= $ps['nama_service'] ?></td>
+                    <td><?= $ps['bookingdate'] ?></td>
+                    <td><?= $ps['harga'] ?></td>
+                    <td><?= $ps['keluhan'] ?></td>
+                  </form>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
           </table>
         </div>
       </div>
-  </div>
+    </div>
   </section>
 
   <!---ModalAddPemesanan--->
+  <?= form_open_multipart('pasien/pesanService') ?>
   <div class="modal" tabindex="-1" role="dialog" id="addpesanan">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">FORM PEMESANAN SERVICE</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form>
-      <div class="form-group">
-    <label for="exampleFormControlSelect1">Nama Dokter</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Jenis Service</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-  <label for="exampleFormControlSelect1">Booking Tanggal</label>
-    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-      </div>
-      <div class="form-group">
-    <label for="exampleFormControlTextarea1">Keluhan</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">FORM PEMESANAN SERVICE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Nama Dokter</label>
+              <select class="form-control" id="exampleFormControlSelect1" name="name">
+                <?php foreach ($dokter as $dt) : ?>
+                  <option value="<?= $dt['id_user'] ?>"><?= $dt['name'] ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Jenis Service</label>
+              <select class="form-control" id="exampleFormControlSelect1" name="service">
+                <?php foreach ($service as $s) : ?>
+                  <option value="<?= $s['id_service'] ?>"><?= $s['nama_service']  ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Booking Tanggal</label>
+              <input class="form-control" type="date" value="2011-08-19" id="example-date-input" name="booking">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Keluhan</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="keluhan"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <?= form_submit('submit', 'Pesan', ['class' => 'btn btn-primary']); ?>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
-  </div>
   <?php endforeach; ?>
-</div>
+  </div>

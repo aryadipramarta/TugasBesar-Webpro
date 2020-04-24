@@ -27,7 +27,7 @@
   <section id="nav-bar">
     <nav class="navbar navbar-expand-lg navbar-light">
       <?php foreach ($data as $d) : ?>
-        <h1 class="navbar-brand"><i class="fas fa-user-circle"></i><b> | <?= $d->username; ?> </b></h1>
+        <h1 class="navbar-brand"><i class="fas fa-user-circle"></i><b> | <?= $d['username']; ?> </b></h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
@@ -38,10 +38,10 @@
               <a class="nav-link" href="#">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/produk'); ?>">PESAN PRODUCT</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/produk'); ?>">PRODUCT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">PESAN SERVICE</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">SERVICE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">EDIT PROFILE</a>
@@ -59,7 +59,7 @@
     </div>
     <div class="d-flex justify-content-center">
       <br>
-      <h2 class="isibanneruser"><b>Welcome, <?= $d->name ?> </b></h2>
+      <h2 class="isibanneruser"><b>Welcome, <?= $d['name'] ?> </b></h2>
     </div>
     <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
   <?php endforeach; ?>

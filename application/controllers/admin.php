@@ -193,10 +193,12 @@ class admin extends CI_Controller
             'email' => htmlspecialchars($this->input->post('email', true)),
         ];
         if ($this->form_validation->run() == false) {
-            $this->load->view('user/admin/dokter/dokter_admin');
-            $this->load->view('template/menu_footer');
+            echo 'GAGAL';
+            //redirect('admin/dokter', 'refresh');
         } else {
             $cek = $this->authModel->editDokter($id_user, $data);
+            var_dump($cek);
+            exit();
             redirect('admin/dokter', 'refresh');
         }
     }

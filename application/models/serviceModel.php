@@ -25,7 +25,8 @@ class serviceModel extends CI_Model
     }
     public function getAllService()
     {
-        return $this->db->get('service')->result_array();
+        $result = $this->db->get('service')->result_array();
+        return $result;
     }
     public function deleteService($id_service)
     {
@@ -33,7 +34,23 @@ class serviceModel extends CI_Model
         $result = $this->db->delete('service');
         return $result;
     }
-    public function booking()
+    public function pesanService($data)
     {
+        $result = $this->db->insert('pesan_service', $data);
+        return $result;
+    }
+    public function getPesanService($id_user)
+    {
+        $this->db->where('id_user', $id_user);
+        $result = $this->db->get('pesan_service')->result_array();
+        return $result;
+    }
+    public function getNamaHargaService($id_service)
+    {
+        $this->db->select('nama_service,harga');
+        $this->db->from('service');
+        $this->db->where('id_service', $id_service);
+        $result = $this->db->get()->result_array();
+        return $result;
     }
 }

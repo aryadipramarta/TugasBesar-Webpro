@@ -35,20 +35,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('admin'); ?>">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('admin/produk'); ?>">PRODUCT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>admin/service">SERVICE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>admin/dokter">DOKTER</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
-                    </li>
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('admin/produk'); ?>">PRODUCT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url(); ?>home/contact">SERVICE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url(); ?>home/product">DOKTER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -153,46 +153,40 @@
     </div>
   </div>
 
-  <!---ModalUpdateDokter--->
-  <!-- <?php foreach ($data as $d) : ?> -->
-  <?= form_open_multipart('admin/updateDokter/' . $d['id_user']) ?>
-  <div class="modal" tabindex="-1" role="dialog" id="updatedokter<?= $d['id_user'] ?>">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">UPDATE DOKTER</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <?= form_label('Nama Dokter') ?>
-              <!-- <label for="formGroupExampleInput">Nama Service</label> -->
-              <?= form_input(['name' => 'name', 'class' => 'form-control', 'required' => 'required']) ?>
-              <!-- <input type="text" class="form-control" id="namaservice" name="nama_service"> -->
-            </div>
-            <div class="form-group">
-              <?= form_label('Username') ?>
-              <?= form_input(['name' => 'username', 'class' => 'form-control', 'required' => 'required']) ?>
-              <!-- <label for="formGroupExampleInput">Harga</label>
-              <input type="text" class="form-control" id="namaservice" name="harga"> -->
-            </div>
-            <div class="form-group">
-              <?= form_label('Email') ?>
-              <?= form_input(['name' => 'email', 'class' => 'form-control', 'required' => 'required']) ?>
-              <!-- <label for="formGroupExampleInput">Harga</label>
-              <input type="text" class="form-control" id="namaservice" name="harga"> -->
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <?= form_submit('submit', 'Edit', ['class' => 'btn btn-primary']); ?>
-          <!-- <a type="button" class="btn btn-primary" href="">Save changes</a> -->
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <!---ModalUpdate--->
+  <?php foreach ($data as $d) : ?>
+    <?= form_open_multipart('admin/updateDokter/' . $d['id_user']) ?>
+    <div class="modal" tabindex="-1" role="dialog" id="updatedokter<?= $d['id_user'] ?>">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">UPDATE DOKTER</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Nama Dokter</label>
+                <input type="text" class="form-control" id="namaservice" name="name">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Username</label>
+                <input type="text" class="form-control" id="namaservice" name="username">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Email</label>
+                <input type="text" class="form-control" id="namaservice" name="email">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <?= form_submit('submit', 'Edit', ['class' => 'btn btn-primary']); ?>
+            <!-- <a type="button" class="btn btn-primary" href="">Save changes</a> -->
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<?php endforeach; ?>
+  <?php endforeach; ?>
