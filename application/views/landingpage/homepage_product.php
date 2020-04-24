@@ -25,6 +25,7 @@ $produk = $produk["produk"];
           <br>
           <h5><b><?= $d["tipe_produk"];?><b></h5>
           <img src="<?=base_url('assets/image/')?><?=$d["gambar"]?>"class="gambarproduct">
+          <h5><?=$d["nama_produk"];?></h5>
           <p><?=$d["deskripsi"]; ?></p>
           <h5><?= $d["harga"];?></h5>
         </div>
