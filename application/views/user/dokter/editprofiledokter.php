@@ -50,45 +50,57 @@
         <div class="d-flex justify-content-center">
             <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
         </div>
-        <div class="d-flex justify-content-center">
-            <br>
-            <h2 class="isibanneruser"><b>WELCOME DOKTER</b></h2>
-        </div><div class="d-flex justify-content-center">
-            <h2 class="isibanneruser"><b><?= $d->name; ?></b></h2>
-        </div>
         <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
     </section>
-  <section class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container text-center">
-              <img src="profileavatar.png" width="25%" class="rounded-circle img-thumbnail">
-              <h1 class="display-4">NAMA DOKTER</h1>
-              <p class="lead">Spesialis Kulit dan Kelamin</p>
-              <p class="lead">"Saya siap mendengarkan setiap keluhan anda dan memberikan solusinya"</p>
-            </div>
+    <section class="services">
+  <div class="d-flex justify-content-center">
+      <div class="cardeditprofile">
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+          <img src="<?= base_url('assets/image/profileedit.png') ?>" alt="" class="editprofileimg">
           </div>
-        </div>
-        <div class="col">
-          <div class="row">
-            <div class="jumbotron jumbotron-fluid">
-              <div class="container text-left">
-                <h2 class= "text-center">LATAR BELAKANG PENDIDIKAN</h2>
-                <p class="lead mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic voluptatibus quia
-                  suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
-                  aliquid, eos in dolore mollitia laborum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic voluptatibus quia
-                  suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
-                  aliquid.</p>
-              </div>
-            </div>  
+          <div class="d-flex justify-content-center">
+          <h3 class="juduledit"><b>EDIT PROFILE</b></h3>
           </div>
+          <div class="d-flex justify-content-center">
+          <form>
+          <div class="form-group">
+          <label for="exampleInputName">Nama</label>
+          <input type="text" class="form-control" id="exampleInputnama" aria-describedby="nameHelp" value="<?= $d->name; ?>">
+          </div>
+          <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" class="form-control" id="exampleInputusername" aria-describedby="usernameHelp" value="<?= $d->username; ?>">
+          </div>
+          <div class="form-group">
+          <label for="exampleInputPassword1">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="<?= $d->email; ?>">
+          </div>
+          <button type="button" data-target="#modaledit" class="btn_edit" data-toggle="modal">EDIT DATA</button>
+          </form>
+          </div>  
         </div>
       </div>
-    </div>
-    </div>
-    </div>
+  </div>
   </section>
   <?php endforeach; ?>
+  <div class="modal" tabindex="-1" role="dialog" id="modaledit">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirmation Edit</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Are You Sure Want to Edit this Data ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </html>

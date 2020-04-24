@@ -3,20 +3,14 @@ class produkModel extends CI_Model
 {
     public function createProduk($data)
     {
-        return $this->db->insert('produk', $data);
+        $result = $this->db->insert('produk', $data);
+        return $result;
     }
-    public function updateProduk($id_produk)
+    public function updateProduk($id_produk, $data)
     {
-        $data = [
-            'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),
-            'kategori' => htmlspecialchars($this->input->post('kategori', true)),
-            'deskripsi' => htmlspecialchars($this->input->post('deskripsi', true)),
-            'harga' => htmlspecialchars($this->input->post('harga', true))
-
-        ];
-        $produk = json_encode($data);
         $this->db->where('id_produk', $id_produk);
-        return $this->db->insert('produk', $produk);
+        $result = $this->db->update('produk', $data);
+        return $result;
     }
     public function getProduk($id_produk)
     {
@@ -25,12 +19,13 @@ class produkModel extends CI_Model
     }
     public function getAllProduk()
     {
-        return $this->db->get('produk')->result_array();
+        $result = $this->db->get('produk')->result_array();
+        return $result;
     }
     public function deleteProduk($id_produk)
     {
         $this->db->where('id_produk', $id_produk);
-        return $this->db->delete('id_produk');
+        return $this->db->delete('produk');
     }
     public function pesenProduk()
     {

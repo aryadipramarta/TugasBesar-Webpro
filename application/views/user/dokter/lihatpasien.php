@@ -50,45 +50,33 @@
         <div class="d-flex justify-content-center">
             <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
         </div>
-        <div class="d-flex justify-content-center">
-            <br>
-            <h2 class="isibanneruser"><b>WELCOME DOKTER</b></h2>
-        </div><div class="d-flex justify-content-center">
-            <h2 class="isibanneruser"><b><?= $d->name; ?></b></h2>
-        </div>
         <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
     </section>
-  <section class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container text-center">
-              <img src="profileavatar.png" width="25%" class="rounded-circle img-thumbnail">
-              <h1 class="display-4">NAMA DOKTER</h1>
-              <p class="lead">Spesialis Kulit dan Kelamin</p>
-              <p class="lead">"Saya siap mendengarkan setiap keluhan anda dan memberikan solusinya"</p>
-            </div>
+    <section class="services">
+  <div class="d-flex justify-content-center">
+      <div class="cardtable">
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+          <h3><b>TABLE DAFTAR PASIEN</b></h3>
           </div>
-        </div>
-        <div class="col">
-          <div class="row">
-            <div class="jumbotron jumbotron-fluid">
-              <div class="container text-left">
-                <h2 class= "text-center">LATAR BELAKANG PENDIDIKAN</h2>
-                <p class="lead mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic voluptatibus quia
-                  suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
-                  aliquid, eos in dolore mollitia laborum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic voluptatibus quia
-                  suscipit, ratione earum tenetur temporibus fuga, atque numquam obcaecati debitis officia architecto
-                  aliquid.</p>
-              </div>
-            </div>  
+          <div class="d-flex justify-content-center">
+          <h3><b>DOKTER <?= $d->name; ?></b></h3>
           </div>
+          <div class="d-flex justify-content-center">
+          </div>
+          <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nama Pasien</th>
+              <th>Service</th>
+              <th>Jadwal</th>
+              <th>Keluhan</th>
+            </tr>
+          </thead>
+          </table>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
+  </div>
   </section>
   <?php endforeach; ?>
 </html>
