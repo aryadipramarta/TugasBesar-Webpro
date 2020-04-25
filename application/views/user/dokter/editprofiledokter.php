@@ -37,7 +37,7 @@
                         <a class="nav-link" href="<?php echo base_url('dokter/datapasien'); ?>">DATA PASIEN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">EDIT PROFILE</a>
+                        <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">VIEW PROFILE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
@@ -60,23 +60,22 @@
           <img src="<?= base_url('assets/image/profileedit.png') ?>" alt="" class="editprofileimg">
           </div>
           <div class="d-flex justify-content-center">
-          <h3 class="juduledit"><b>EDIT PROFILE</b></h3>
+          <h3 class="juduledit"><b>PROFILE</b></h3>
           </div>
           <div class="d-flex justify-content-center">
           <form>
           <div class="form-group">
-          <label for="exampleInputName">Nama</label>
-          <input type="text" class="form-control" id="exampleInputnama" aria-describedby="nameHelp" value="<?= $d->name; ?>">
+          <label for="exampleInputName">Nama Dokter</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isinama">
           </div>
           <div class="form-group">
           <label for="exampleInputEmail1">Username</label>
-          <input type="text" class="form-control" id="exampleInputusername" aria-describedby="usernameHelp" value="<?= $d->username; ?>">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isiusername">
           </div>
           <div class="form-group">
           <label for="exampleInputPassword1">Email</label>
-          <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="<?= $d->email; ?>">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isiemail">
           </div>
-          <button type="button" data-target="#modaledit" class="btn_edit" data-toggle="modal">EDIT DATA</button>
           </form>
           </div>  
         </div>
@@ -84,23 +83,4 @@
   </div>
   </section>
   <?php endforeach; ?>
-  <div class="modal" tabindex="-1" role="dialog" id="modaledit">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Confirmation Edit</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Are You Sure Want to Edit this Data ?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
 </html>

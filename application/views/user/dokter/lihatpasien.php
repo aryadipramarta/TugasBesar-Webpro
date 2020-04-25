@@ -37,7 +37,7 @@
                         <a class="nav-link" href="<?php echo base_url('dokter/datapasien'); ?>">DATA PASIEN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">EDIT PROFILE</a>
+                        <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">VIEW PROFILE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
