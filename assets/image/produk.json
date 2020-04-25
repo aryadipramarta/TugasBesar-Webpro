@@ -5,7 +5,7 @@
         "tipe_produk": "Facewash",
         "nama_produk": "SkinSaver Gentle Skin Cleanser",
         "harga": "Rp 75.000",
-        "deskripsi": "Pembersih kami yang paling laris dan disukai banyak orang, formulanya yang tanpa menggunakan bahan yang tidak penting dan efektif. Membersihkan sekaligus melembapkan.",
+        "deskripsi": "Pembersih kami yang paling laris dan disukai banyak orang, formulanya tanpa menggunakan bahan yang tidak penting dan efektif. Membersihkan sekaligus melembapkan.",
         "gambar": "facewash1.png"
     },
     {
@@ -13,23 +13,23 @@
         "tipe_produk": "Facewash",
         "nama_produk": "SkinSaver Cleanser with 2 % Benzoyl Peroxide",
         "harga": "Rp 80.000",
-        "deskripsi": "Dengan 2% Benzoyl Peroxide, facewash ini dapat membantu untuk mengurangi peradangan, membunuh bakteri penyebab jerawat, dan membersihkan tanpa membuat kering.",
+        "deskripsi": "Dengan 2% Benzoyl Peroxide, facewash ini dapat membantu untuk mengurangi peradangan, membunuh bakteri penyebab jerawat, dan membersihkan tanpa membuat kering",
         "gambar": "facewash2.png"
     },
     {
         "id": "3",
         "tipe_produk": "Moisturizer",
-        "nama_produk": "SkinSaver Barrier Moisturizer",
+        "nama_produk": "SkinSaver LightDay Moisturizer with SPF",
         "harga": "Rp 100.000",
-        "deskripsi": "melembabkan kulit sangat cocok untuk kulit berjerawat mengandung Ceramide.",
+        "deskripsi": "Melembabkan kulit sekaligus memberikan proteksi terhadap sinar matahari terhadap kulit dari sinar UVA/UVB dengan SPF50+/PA+++",
         "gambar": "moist1.png"
     },
     {
         "id": "4",
         "tipe_produk": "Moisturizer",
-        "nama_produk": "SkinSaver LightDay Moisturizer",
+        "nama_produk": "SkinSaver Barrier Moisturizer with Ceramide",
         "harga": "Rp 120.000",
-        "deskripsi": "melembabkan kulit sangat baik, cocok segala jenis kulit mengandung SPF 50+/PA++++",
+        "deskripsi": "Melembabkan kulit sekaligus memperbaiki skin barrier kulit yang rusak dan menjaganya tetap sehat dengan kandungan Ceramide",
         "gambar": "moist2.png"
     },
     {
@@ -37,7 +37,7 @@
         "tipe_produk": "Acne Spot",
         "nama_produk": "Skinsaver Acne Spot treatment",
         "harga": "Rp 60.000",
-        "deskripsi": "produk terbaik untuk jerawat dengan 2.5% Benzoyl Peroxide",
+        "deskripsi": "Spot Treatment terbaik yang mengandung 2.5% Benzoyl Peroxide, yang dapat membunuh bakteri penyebab jerawat, sekaligus membuka pori-pori kulit yang tertutup",
         "gambar": "acnespot.png"
     },
     {
@@ -45,7 +45,7 @@
         "tipe_produk": "Serum",
         "nama_produk": "SkinSaver Niacinamide and Zink Serum",
         "harga": "Rp 140.000",
-        "deskripsi": "serum terbaik untuk jerawat anda, mengandung Niacinamide 10% dan Zink 1%",
+        "deskripsi": "Serum yang mengandung Niacinamide 10% dan Zinc 1%, membantu untuk mengurangi dark spot, mengurangi kerutan, meratakan warna kulit, dan memperbaiki tesktur kulit anda",
         "gambar": "serum.png"
     }
     ]
