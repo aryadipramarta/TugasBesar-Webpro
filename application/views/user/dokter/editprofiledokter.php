@@ -69,21 +69,6 @@
           <h3 class="juduledit"><b>PROFILE</b></h3>
           </div>
           <div class="d-flex justify-content-center">
-<<<<<<< HEAD
-          <form>
-          <div class="form-group">
-          <label for="exampleInputName">Nama Dokter</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $d['name'] ?>">
-          </div>
-          <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $d['username'] ?>">
-          </div>
-          <div class="form-group">
-          <label for="exampleInputPassword1">Email</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $d['email'] ?>">
-          </div>
-=======
           <?= form_open_multipart('pasien/editProfile/' . $d['id_user']) ?>
             <form>
               <div class="form-group">
@@ -99,7 +84,6 @@
                 <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp">
               </div>
               <?= form_submit('submit', 'Submit', ['class' => 'btn_edit']); ?>
->>>>>>> 6cb54e9b7b8c15aec8d54fcde859823872888755
           </form>
         </div>
       </div>
