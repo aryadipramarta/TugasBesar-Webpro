@@ -37,7 +37,7 @@
                     <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                 </div>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" value="<?php $produk['produk_img']; ?>">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01" name="uploadImage" aria-describedby="inputGroupFileAddon01">
                     <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                 </div>
             </div>
@@ -48,6 +48,13 @@
         </div>
         <?= form_close() ?>
     </div>
+    <script src="<?php echo base_url('assets/jquery-3.2.1.min.js'); ?>"></script>
+    <script>
+        $('.custom-file-input').on('change', function() {
+            let fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        });
+    </script>
 </body>
 
 </html>

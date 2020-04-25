@@ -48,7 +48,7 @@ class admin extends CI_Controller
     {
         $data['title'] = 'SkinSaver-Form Tambah';
         $this->load->view('user/admin/produk/form_tambah', $data);
-        // $this->load->view('template/menu_footer');
+        //$this->load->view('template/menu_footer');
     }
     public function updateProduk($id_produk)
     {
@@ -59,7 +59,7 @@ class admin extends CI_Controller
         $config['max_width']            =  1920;
         $config['max_height']           =  1080;
         $this->load->library('upload', $config);
-        $this->upload->do_upload('gambar');
+        $this->upload->do_upload('uploadImage');
         $image = $this->upload->data();
         $data = [
             'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),

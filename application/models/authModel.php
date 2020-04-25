@@ -24,7 +24,13 @@ class authModel extends CI_Model
                     'role_id' => $result['role_id']
                 ];
                 $this->session->set_userdata($user);
-                return true;
+                if ($user['role_id'] == 1) {
+                    redirect('dokter');
+                } else if ($user['role_id'] == 2) {
+                    redirect('pasien');
+                } else {
+                    redirect('admin');
+                }
             } else {
                 return false;
             }

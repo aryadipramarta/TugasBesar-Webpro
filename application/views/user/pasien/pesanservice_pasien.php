@@ -47,7 +47,7 @@
               <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">EDIT PROFILE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">LOGOUT</a>
+              <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
             </li>
           </ul>
         </div>
