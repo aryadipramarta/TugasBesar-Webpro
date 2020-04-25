@@ -54,9 +54,9 @@
     </section>
     <section class="services">
   <div class="d-flex justify-content-center">
-    <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
+    <!-- <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner"> -->
   </div>
-  <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
+  <!-- <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img"> -->
 </section>
 <section class="services">
   <div class="d-flex justify-content-center">

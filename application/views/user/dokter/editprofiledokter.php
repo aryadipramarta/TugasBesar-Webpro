@@ -54,9 +54,9 @@
     </section>
     <section class="services">
   <div class="d-flex justify-content-center">
-    <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
+    <!-- <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner"> -->
   </div>
-  <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
+  <!-- <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img"> -->
 </section>
 <section class="services">
   <div class="d-flex justify-content-center">
@@ -69,21 +69,19 @@
           <h3 class="juduledit"><b>PROFILE</b></h3>
           </div>
           <div class="d-flex justify-content-center">
-          <?= form_open_multipart('pasien/editProfile/' . $d['id_user']) ?>
-            <form>
-              <div class="form-group">
-                <label for="exampleInputName">Nama</label>
-                <input type="text" class="form-control" id="exampleInputnama" name="name" aria-describedby="nameHelp">
-              </div>
-              <div class=" form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputusername" name="username" aria-describedby="usernameHelp">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp">
-              </div>
-              <?= form_submit('submit', 'Submit', ['class' => 'btn_edit']); ?>
+          <form>
+          <div class="form-group">
+          <label for="exampleInputName">Nama Dokter</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=<?=$d['name']?>>
+          </div>
+          <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=<?=$d['username']?>>
+          </div>
+          <div class="form-group">
+          <label for="exampleInputPassword1">Email</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=<?=$d['email']?>>
+          </div>
           </form>
         </div>
       </div>
