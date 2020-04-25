@@ -38,10 +38,10 @@
               <a class="nav-link" href="#">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/produk'); ?>">PRODUCT</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/produk'); ?>">PESAN PRODUCT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">SERVICE</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">PESAN SERVICE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">EDIT PROFILE</a>

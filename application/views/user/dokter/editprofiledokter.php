@@ -28,25 +28,31 @@
         <i class="fas fa-bars"></i>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>dokter">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('dokter/datapasien'); ?>">DATA PASIEN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">EDIT PROFILE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
-          </li>
-        </ul>
-      </div>
-  </nav>
-</section>
-<section id="banner">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>dokter">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('dokter/datapasien'); ?>">DATA PASIEN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">VIEW PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section id="banner">
+        <div class="d-flex justify-content-center">
+            <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
+        </div>
+        <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
+    </section>
+    <section class="services">
   <div class="d-flex justify-content-center">
     <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
   </div>
@@ -58,50 +64,29 @@
       <div class="card-body">
         <div class="d-flex justify-content-center">
           <img src="<?= base_url('assets/image/profileedit.png') ?>" alt="" class="editprofileimg">
-        </div>
-        <div class="d-flex justify-content-center">
+          </div>
+          <div class="d-flex justify-content-center">
           <h3 class="juduledit"><b>PROFILE</b></h3>
-        </div>
-        <div class="d-flex justify-content-center">
+          </div>
+          <div class="d-flex justify-content-center">
           <form>
-            <div class="form-group">
-              <label for="exampleInputName">Nama</label>
-              <input type="text" class="form-control" id="exampleInputnama" aria-describedby="nameHelp" value="<?= $d['name']; ?>">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Username</label>
-              <input type="text" class="form-control" id="exampleInputusername" aria-describedby="usernameHelp" value="<?= $d['username']; ?>">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" value="<?= $d['email']; ?>">
-            </div>
-            <button type="button" data-target="#modaledit" class="btn_edit" data-toggle="modal">EDIT DATA</button>
+          <div class="form-group">
+          <label for="exampleInputName">Nama Dokter</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isinama">
+          </div>
+          <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isiusername">
+          </div>
+          <div class="form-group">
+          <label for="exampleInputPassword1">Email</label>
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isiemail">
+          </div>
           </form>
         </div>
       </div>
     </div>
   </div>
-</section>
-<?php endforeach; ?>
-<div class="modal" tabindex="-1" role="dialog" id="modaledit">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Confirmation Edit</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Are You Sure Want to Edit this Data ?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+  </section>
+  <?php endforeach; ?>
 </html>

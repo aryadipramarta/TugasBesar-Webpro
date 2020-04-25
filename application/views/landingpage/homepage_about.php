@@ -13,18 +13,37 @@
 
   <!--Service-->
   <section class="services">
-    <div class="d-flex justify-content-center">
-      <div class="card">
-        <div class="card-body">
-          <div class="d-flex justify-content-center">
-            <img src="<?= base_url('assets/image/logo.png') ?>" class="img-logoabout">
+     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="height:525px" >
+            <img src="<?= base_url('assets/image/about001.jpg') ?>" class="d-block w-100" id="face" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
           </div>
-          <p class="card-text text-justify">Website SkinSaver merupakan sebuah website klinik kecantikan yang membantu masalah orang orang
-            dalam melakukan perawatan wajah terutama masalah jerawat yang mungkin menjadi masalah bagi sebagian banyak orang.
-            Website ini juga bertujuan untuk menjual produk yang kami telah uji coba laboratorium dan telah di legalisasi oleh FDA. Website ini sudah terbukti dapat membantu pejuang jerawat dalam waktu kurang lebih 3-4 bulan memakai rangkaian produk yang kami berikan bersadarkan keluhan yang diberikan.
-            Bila dalam 3-4 bulan tidak ada perkembangan, jalan lain yang dapat diambil pengunjung adalah mengonsumsi isotretinoin, yang merupakan obat keras yang harus diresepkan oleh dokter. Di dalam website YourSkinSaver pengunjung dapat melakukan pemesanan dokter untuk melakukan service yang diinginkan seperti mendapatkan rangkaian perawatan dari kami, pengungjung juga dapat membeli produk langsung dari kami tanpa harus berkonsultasi terlebih dahulu.
-            Produk yang kami jual bebas adalah produk yang tidak diracik, yaitu di antaranya, Benzoyl Peroxide Spot Treatment Saver 2.5%, Benzoyl Peroxide 2% Saver Cleanser, Saver Gentle Skin Cleanser, Niacinamide Serum Saver 10% + Zinc 1% , Light Saver Day Moisturizer SPF 50+++/PA++, Barrier Saver Moisturizer with Ceramide. </p>
+          <div class="carousel-item" style="height:525px">
+            <img src="<?= base_url('assets/image/about002.jpg') ?>"  class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" style="height:525px">
+            <img src="<?= base_url('assets/image/about003.jpg') ?>"  class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
   </section>

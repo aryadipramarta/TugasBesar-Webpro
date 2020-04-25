@@ -41,10 +41,10 @@
             <a class="nav-link" href="<?php echo base_url('admin/produk'); ?>">PRODUCT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>home/contact">SERVICE</a>
+            <a class="nav-link" href="<?php echo base_url(); ?>admin/service">SERVICE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url(); ?>home/product">DOKTER</a>
+            <a class="nav-link" href="<?php echo base_url(); ?>admin/dokter">DOKTER</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
