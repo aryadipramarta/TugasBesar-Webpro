@@ -21,12 +21,12 @@
 </head>
 <!-- Navigation -->
 <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light">
-        <?php foreach ($data as $d) : ?>
-            <h1 class="navbar-brand"><i class="fas fa-user-circle"></i><b> | DOKTER </b></h1>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <?php foreach ($user as $d) : ?>
+      <h1 class="navbar-brand"><i class="fas fa-user-circle"></i><b> | DOKTER </b></h1>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
@@ -54,17 +54,23 @@
     </section>
     <section class="services">
   <div class="d-flex justify-content-center">
-      <div class="cardtable">
-        <div class="card-body">
-          <div class="d-flex justify-content-center">
+    <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
+  </div>
+  <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
+</section>
+<section class="services">
+  <div class="d-flex justify-content-center">
+    <div class="cardtable">
+      <div class="card-body">
+        <div class="d-flex justify-content-center">
           <h3><b>TABLE DAFTAR PASIEN</b></h3>
-          </div>
-          <div class="d-flex justify-content-center">
-          <h3><b>DOKTER <?= $d->name; ?></b></h3>
-          </div>
-          <div class="d-flex justify-content-center">
-          </div>
-          <table class="table table-bordered">
+        </div>
+        <div class="d-flex justify-content-center">
+          <h3><b>DOKTER <?= $d['name']; ?></b></h3>
+        </div>
+        <div class="d-flex justify-content-center">
+        </div>
+        <table class="table table-bordered">
           <thead>
             <tr>
               <th>Nama Pasien</th>
@@ -73,10 +79,23 @@
               <th>Keluhan</th>
             </tr>
           </thead>
-          </table>
-        </div>
+          <tbody>
+            <?php foreach ($pesanS as $ps) : ?>
+              <tr>
+                <form action="">
+                  <td><?= $ps['nama_dokter'] ?></td>
+                  <td><?= $ps['nama_service'] ?></td>
+                  <td><?= $ps['bookingdate'] ?></td>
+                  <td><?= $ps['keluhan'] ?></td>
+                </form>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
       </div>
+    </div>
   </div>
-  </section>
-  <?php endforeach; ?>
+</section>
+<?php endforeach; ?>
+
 </html>

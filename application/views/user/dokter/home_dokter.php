@@ -63,16 +63,6 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container text-center">
-            <img src="profileavatar.png" width="25%" class="rounded-circle img-thumbnail">
-            <h1 class="display-4">NAMA DOKTER</h1>
-            <p class="lead">Spesialis Kulit dan Kelamin</p>
-            <p class="lead">"Saya siap mendengarkan setiap keluhan anda dan memberikan solusinya"</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
         <div class="row">
           <div class="jumbotron jumbotron-fluid">
             <div class="container text-center">
@@ -100,8 +90,6 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
   </div>
 </section>
 <?php endforeach; ?>

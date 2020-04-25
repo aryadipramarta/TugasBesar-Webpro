@@ -42,6 +42,14 @@ class serviceModel extends CI_Model
     public function getPesanService($id_user)
     {
         $this->db->where('id_user', $id_user);
+        $this->db->order_by('bookingdate', 'ASC');
+        $result = $this->db->get('pesan_service')->result_array();
+        return $result;
+    }
+    public function getLiatService($id_dokter)
+    {
+        $this->db->where('id_dokter', $id_dokter);
+        $this->db->order_by('bookingdate', 'ASC');
         $result = $this->db->get('pesan_service')->result_array();
         return $result;
     }

@@ -20,6 +20,12 @@ class produkModel extends CI_Model
         $result = $this->db->get()->result_array();
         return $result;
     }
+    public function getProduk($id_produk)
+    {
+        $this->db->where('id_produk', $id_produk);
+        $result = $this->db->get('produk')->row_array();
+        return $result;
+    }
     public function getAllProduk()
     {
         $result = $this->db->get('produk')->result_array();
