@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>dokter">HOME</a>
+                        <a class="nav-link" href="<?php echo base_url('dokter'); ?>">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('dokter/datapasien'); ?>">DATA PASIEN</a>
