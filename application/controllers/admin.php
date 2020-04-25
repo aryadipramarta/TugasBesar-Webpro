@@ -16,9 +16,7 @@ class admin extends CI_Controller
     {
         $this->load->model('produkModel');
         $produk = $this->produkModel->getAllProduk();
-        $encode_data = json_encode($produk);
-        $decode_data = json_decode($encode_data);
-        $this->load->view('user/admin/produk/lihatproduk_admin', ['data' => $decode_data]);
+        $this->load->view('user/admin/produk/lihatproduk_admin', ['data' => $produk]);
         $this->load->view('template/menu_footer');
     }
     public function createProduk()
@@ -30,7 +28,7 @@ class admin extends CI_Controller
         $config['max_width']            =  1920;
         $config['max_height']           =  1080;
         $this->load->library('upload', $config);
-        $this->upload->do_upload('gambar');
+        $this->upload->do_upload('uploadImage');
         $image = $this->upload->data();
         $data = [
             'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),
