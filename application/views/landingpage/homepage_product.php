@@ -19,17 +19,20 @@ $produk = $produk["produk"];
 ?>
 <section class="services">
   <div class="d-flex justify-content-center">
-      <div class="row text-center">
+      <div class="row">
       <?php foreach ($produk as $d) : ?>
-        <div class="col-md-auto product-card">
+        <div class="col-md-auto product-card center" style="width:87rem; height:30rem;">
+          <br>
           <br>
           <h5><b><?= $d["tipe_produk"];?><b></h5>
+          <div class="card-body bg-light mb-3" style="margin:0 auto; width: 500px ">
           <img src="<?=base_url('assets/image/')?><?=$d["gambar"]?>"class="gambarproduct">
+          </div>
           <h5><?=$d["nama_produk"];?></h5>
           <p><?=$d["deskripsi"]; ?></p>
           <h5><?= $d["harga"];?></h5>
         </div>
+      <?php endforeach; ?>
       </div>
-    <?php endforeach; ?>
   </div>
 </section>
