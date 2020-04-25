@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2020 at 05:27 PM
+-- Generation Time: Apr 25, 2020 at 11:00 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -25,31 +25,50 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pemesanan`
+-- Table structure for table `pesan_produk`
 --
 
-CREATE TABLE `pemesanan` (
-  `idpemesanan` int(5) NOT NULL,
-  `idproduk` int(5) NOT NULL,
-  `iduser` int(11) NOT NULL,
+CREATE TABLE `pesan_produk` (
+  `id_pesanproduk` int(11) NOT NULL,
+  `id_produk` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `nama_produk` varchar(256) NOT NULL,
   `jumlahpesanan` int(11) NOT NULL,
-  `alamat` varchar(250) NOT NULL
+  `alamat` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pesan_produk`
+--
+
+INSERT INTO `pesan_produk` (`id_pesanproduk`, `id_produk`, `id_user`, `nama_produk`, `jumlahpesanan`, `alamat`) VALUES
+(2, 1, 1, 'SkinSaver Gentle Skin Cleanser', 1, 'VILA NUSA INDAH 2 BLOK CC3/10 RT.05/RW.28 BOJONG KULUR GUNUNG PUTRI BOGOR KABUPATEN BOGOR JAWA BARAT'),
+(3, 2, 5, 'SkinSaver Cleanser', 1, 'VILA NUSA INDAH 2 BLOK CC3/10 RT.05/RW.28 BOJONG KULUR GUNUNG PUTRI BOGOR KABUPATEN BOGOR JAWA BARAT');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pesanservice`
+-- Table structure for table `pesan_service`
 --
 
-CREATE TABLE `pesanservice` (
-  `idpesanservice` int(5) NOT NULL,
-  `iddokter` int(11) NOT NULL,
-  `idpasien` int(11) NOT NULL,
-  `idservice` int(5) NOT NULL,
+CREATE TABLE `pesan_service` (
+  `id_pesanservice` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_service` int(11) NOT NULL,
+  `id_dokter` int(11) NOT NULL,
+  `nama_dokter` varchar(256) NOT NULL,
+  `nama_service` varchar(256) NOT NULL,
   `bookingdate` date NOT NULL,
-  `keluhan` varchar(250) NOT NULL
+  `keluhan` varchar(256) NOT NULL,
+  `harga` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pesan_service`
+--
+
+INSERT INTO `pesan_service` (`id_pesanservice`, `id_user`, `id_service`, `id_dokter`, `nama_dokter`, `nama_service`, `bookingdate`, `keluhan`, `harga`) VALUES
+(1, 1, 1, 5, 'Sukijo', 'pijatt', '2020-04-24', 'konyol kali lah kau', 8000);
 
 -- --------------------------------------------------------
 
@@ -58,24 +77,24 @@ CREATE TABLE `pesanservice` (
 --
 
 CREATE TABLE `produk` (
-  `id` int(5) NOT NULL,
-  `tipe_produk` varchar(20) NOT NULL,
-  `nama_produk` varchar(100) NOT NULL,
-  `harga` int(100) NOT NULL,
-  `deskripsi` varchar(500) NOT NULL
+  `id_produk` int(11) NOT NULL,
+  `nama_produk` varchar(256) NOT NULL,
+  `kategori` varchar(200) NOT NULL,
+  `deskripsi` varchar(500) NOT NULL,
+  `harga` float NOT NULL,
+  `produk_img` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`id`, `tipe_produk`, `nama_produk`, `harga`, `deskripsi`) VALUES
-(1, 'Facewash', 'SkinSaver Gentle Skin Cleanser', 75000, 'produk ini adalah produk andalan kami yang terbukti sangat cocok untuk membersihkan jerawat'),
-(2, 'Facewash', 'SkinSaver Cleanser', 80000, 'produk yang sangat baik mengandung 2% Benzoyl Peroxide dan eskrak buah lainnya'),
-(3, 'Moisturizer', 'SkinSaver Barrier Moisturizer', 100000, 'melembabkan kulit sangat cocok untuk kulit berjerawat mengandung Ceramide'),
-(4, 'Moisturizer', 'SkinSaver LightDay Moisturizer', 120000, 'melembabkan kulit sangat baik, cocok segala jenis kulit mengandung SPF 50+/PA++++'),
-(5, 'Acne Spot', 'SkinSaver Acne Spot treatment', 60000, 'produk terbaik untuk jerawat dengan 2.5% Benzoyl Peroxide'),
-(6, 'Serum', 'SkinSaver Niacinamide and Zink Serum', 140000, 'serum terbaik untuk jerawat anda, mengandung Niacinamide 10% and Zink 1%');
+INSERT INTO `produk` (`id_produk`, `nama_produk`, `kategori`, `deskripsi`, `harga`, `produk_img`) VALUES
+(1, 'SkinSaver Gentle Skin Cleanser', 'Cleanser', 'Produk ini adalah produk andalan kami yang terbukti sangat cocok untuk membersihkan jerawat', 78000, 'facewash1.png'),
+(2, 'SkinSaver Cleanser', 'Cleanser', 'Produk yang sangat baik mengandung 2% Benzoyl Peroxide dan eskrak buah lainnya', 80000, 'facewash2.png'),
+(3, 'SkinSaver Barrier Moisturizer', 'Moisturizer', 'Melembabkan kulit sangat cocok untuk kulit berjerawat mengandung Ceramide', 100000, 'moist1.png'),
+(4, 'SkinSaver LightDay Moisturizer', 'Moisturizer', 'Melembabkan kulit sangat baik, cocok segala jenis kulit mengandung SPF 50+/PA++++', 12000, 'moist2.png'),
+(17, 'Biskuat', 'eqwewqe', 'wqeweqw', 231231, 'javascript-1111.jpg');
 
 -- --------------------------------------------------------
 
@@ -84,11 +103,18 @@ INSERT INTO `produk` (`id`, `tipe_produk`, `nama_produk`, `harga`, `deskripsi`) 
 --
 
 CREATE TABLE `service` (
-  `id_service` int(5) NOT NULL,
-  `nama_service` varchar(200) NOT NULL,
+  `id_service` int(11) NOT NULL,
+  `nama_service` varchar(256) NOT NULL,
   `deskripsi` varchar(500) NOT NULL,
-  `harga` int(100) NOT NULL
+  `harga` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `service`
+--
+
+INSERT INTO `service` (`id_service`, `nama_service`, `deskripsi`, `harga`) VALUES
+(1, 'pijatt', 'mantap jiwa!!!!', 80000);
 
 -- --------------------------------------------------------
 
@@ -111,9 +137,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `name`, `username`, `email`, `password`, `role_id`) VALUES
 (1, 'Faishal Raihan', 'redxx', 'faishalraihan73@gmail.com', '$2y$10$X6c5LBy0TxMn/TVIq3UvAO65X/QeEXxC73OLwfSqRq.rmcVPm4u2q', 2),
-(2, 'Saipul Jamil', 'haphaphap', 'saipulhap@gmail.com', '$2y$10$evOcqxEDUYGVzInIl8wrLeVG2ZmU6O628/5M1qoswds76JjcadGGm', 2),
 (3, 'Panjul Jukipli', 'Panjulll', 'panjul@gmail.com', '$2y$10$JifpR/ioi.cdOSyAWlduRukcc/Y616B/gz7m60oRBTNxgufr2qA.m', 2),
-(4, 'I Komang Gede Aryadi Pramarta', 'aryadip', 'aryadipramarta9@gmail.com', '$2y$10$UTrLkMHP.oDlPT7DEs6xGuFCydrIGGXQaEMvy9poNqojCcO7x2qsm', 2);
+(5, 'Sukijo', 'sukijo', 'sukijo@gmail.com', '$2y$10$2WVKFi7iKtVqno2OreuULucE09RsMO9RW7YYQC2sYMPR0C9JUA9K2', 1),
+(7, 'admin', 'admin', 'admin@gmail.com', '$2y$10$GJIepy6fxxMlNM9FbmyzZ.9UsT/Rt8nnL6qQEJi6b4nMFBPYnY/ay', 3);
 
 -- --------------------------------------------------------
 
@@ -132,34 +158,35 @@ CREATE TABLE `user_role` (
 
 INSERT INTO `user_role` (`role_id`, `role`) VALUES
 (1, 'Dokter'),
-(2, 'Customer');
+(2, 'Customer'),
+(3, 'Admin');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `pemesanan`
+-- Indexes for table `pesan_produk`
 --
-ALTER TABLE `pemesanan`
-  ADD PRIMARY KEY (`idpemesanan`),
-  ADD KEY `fk_pemesanan1` (`iduser`),
-  ADD KEY `fk_pemesanan2` (`idproduk`);
+ALTER TABLE `pesan_produk`
+  ADD PRIMARY KEY (`id_pesanproduk`),
+  ADD KEY `fk_pesanproduk1` (`id_produk`),
+  ADD KEY `fk_pesanproduk2` (`id_user`);
 
 --
--- Indexes for table `pesanservice`
+-- Indexes for table `pesan_service`
 --
-ALTER TABLE `pesanservice`
-  ADD PRIMARY KEY (`idpesanservice`),
-  ADD KEY `fk_pesanservice1` (`idservice`),
-  ADD KEY `fk_pesanservice2` (`iddokter`),
-  ADD KEY `fk_pesanservice3` (`idpasien`);
+ALTER TABLE `pesan_service`
+  ADD PRIMARY KEY (`id_pesanservice`),
+  ADD KEY `fk_pesanservice1` (`id_service`),
+  ADD KEY `fk_pesanservice2` (`id_user`),
+  ADD KEY `fk_pesanservice3` (`id_dokter`);
 
 --
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_produk`);
 
 --
 -- Indexes for table `service`
@@ -171,7 +198,8 @@ ALTER TABLE `service`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `fk_user1` (`role_id`);
 
 --
 -- Indexes for table `user_role`
@@ -184,47 +212,65 @@ ALTER TABLE `user_role`
 --
 
 --
--- AUTO_INCREMENT for table `pemesanan`
+-- AUTO_INCREMENT for table `pesan_produk`
 --
-ALTER TABLE `pemesanan`
-  MODIFY `idpemesanan` int(5) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `pesan_produk`
+  MODIFY `id_pesanproduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `pesanservice`
+-- AUTO_INCREMENT for table `pesan_service`
 --
-ALTER TABLE `pesanservice`
-  MODIFY `idpesanservice` int(5) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `pesan_service`
+  MODIFY `id_pesanservice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `service`
+--
+ALTER TABLE `service`
+  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `role_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `pemesanan`
+-- Constraints for table `pesan_produk`
 --
-ALTER TABLE `pemesanan`
-  ADD CONSTRAINT `fk_pemesanan1` FOREIGN KEY (`iduser`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `fk_pemesanan2` FOREIGN KEY (`idproduk`) REFERENCES `produk` (`id`);
+ALTER TABLE `pesan_produk`
+  ADD CONSTRAINT `fk_pesanproduk1` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_pesanproduk2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `pesanservice`
+-- Constraints for table `pesan_service`
 --
-ALTER TABLE `pesanservice`
-  ADD CONSTRAINT `fk_pesanservice1` FOREIGN KEY (`idservice`) REFERENCES `service` (`id_service`),
-  ADD CONSTRAINT `fk_pesanservice2` FOREIGN KEY (`iddokter`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `fk_pesanservice3` FOREIGN KEY (`idpasien`) REFERENCES `user` (`id_user`);
+ALTER TABLE `pesan_service`
+  ADD CONSTRAINT `fk_pesanservice1` FOREIGN KEY (`id_service`) REFERENCES `service` (`id_service`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_pesanservice2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_pesanservice3` FOREIGN KEY (`id_dokter`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `fk_user1` FOREIGN KEY (`role_id`) REFERENCES `user_role` (`role_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
