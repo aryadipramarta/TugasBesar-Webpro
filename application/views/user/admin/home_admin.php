@@ -44,7 +44,7 @@
                         <a class="nav-link" href="<?php echo base_url(); ?>admin/service">SERVICE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>home/product">DOKTER</a>
+                        <a class="nav-link" href="<?php echo base_url(); ?>admin/dokter">DOKTER</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
