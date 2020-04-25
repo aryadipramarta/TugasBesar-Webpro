@@ -5,15 +5,15 @@
         "tipe_produk": "Facewash",
         "nama_produk": "SkinSaver Gentle Skin Cleanser",
         "harga": "Rp 75.000",
-        "deskripsi": "produk ini adalah produk andalan kami yang terbukti sangat cocok untuk membersihkan jerawat.",
+        "deskripsi": "Pembersih kami yang paling laris dan disukai banyak orang, formulanya yang tanpa menggunakan bahan yang tidak penting dan efektif. Membersihkan sekaligus melembapkan.",
         "gambar": "facewash1.png"
     },
     {
         "id": "2",
         "tipe_produk": "Facewash",
-        "nama_produk": "SkinSaver Cleanser",
+        "nama_produk": "SkinSaver Cleanser with 2 % Benzoyl Peroxide",
         "harga": "Rp 80.000",
-        "deskripsi": "produk yang sangat baik mengandung 2% Benzoyl Peroxide dan eskrak buah lainnya.",
+        "deskripsi": "Dengan 2% Benzoyl Peroxide, facewash ini dapat membantu untuk mengurangi peradangan, membunuh bakteri penyebab jerawat, dan membersihkan tanpa membuat kering.",
         "gambar": "facewash2.png"
     },
     {
