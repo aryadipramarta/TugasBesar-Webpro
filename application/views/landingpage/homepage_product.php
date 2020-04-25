@@ -25,10 +25,10 @@ $produk = $produk["produk"];
           <br>
           <br>
           <h5><b><?= $d["tipe_produk"];?><b></h5>
-          <div class="card-body bg-light mb-3" style="margin:0 auto; width: 500px ">
+          <div class="card-body bg-light mb-3" style="margin:0 auto; width: 550px ">
           <img src="<?=base_url('assets/image/')?><?=$d["gambar"]?>"class="gambarproduct">
-          </div>
           <h5><?=$d["nama_produk"];?></h5>
+          </div>
           <p><?=$d["deskripsi"]; ?></p>
           <h5><?= $d["harga"];?></h5>
         </div>
