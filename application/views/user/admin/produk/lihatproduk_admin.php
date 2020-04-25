@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="<?php echo base_url('admin'); ?>">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('admin/produk'); ?>">PRODUCT</a>
