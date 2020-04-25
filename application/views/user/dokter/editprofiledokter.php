@@ -72,7 +72,7 @@
           <?= form_open_multipart('pasien/editProfile/' . $d['id_user']) ?>
             <form>
               <div class="form-group">
-                <label for="exampleInputName">Nama Dokter</label>
+                <label for="exampleInputName">Nama</label>
                 <input type="text" class="form-control" id="exampleInputnama" name="name" aria-describedby="nameHelp">
               </div>
               <div class=" form-group">
