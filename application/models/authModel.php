@@ -21,6 +21,7 @@ class authModel extends CI_Model
                 $user = [
                     'id_user' => $result['id_user'],
                     'username' => $result['username'],
+                    'name' => $result['name'],
                     'role_id' => $result['role_id']
                 ];
                 $this->session->set_userdata($user);

@@ -77,6 +77,7 @@ class pasien extends CI_Controller
             $this->authModel->editUser($id_user, $data);
             $result = $this->db->get_where('user', ['username' => $data['username']])->row_array();
             $user = [
+                'name' => $result['name'],
                 'username' => $result['username'],
                 'role_id' => $result['role_id']
             ];
@@ -111,6 +112,7 @@ class pasien extends CI_Controller
         $this->load->model('authModel');
         $role = 1;
         $user = $this->session->userdata('id_user');
+        $nama_pasien = $this->session->userdata('name');
         $id_service = $this->input->post('service', true);
         $service = $this->serviceModel->getNamaHargaService($id_service);
         foreach ($service as $s) {
@@ -128,6 +130,7 @@ class pasien extends CI_Controller
             'id_service' => htmlspecialchars($this->input->post('service', true)),
             'id_dokter' => htmlspecialchars($this->input->post('name', true)),
             'nama_dokter' => htmlspecialchars($result1),
+            'nama_pasien' => htmlspecialchars($nama_pasien),
             'nama_service' => htmlspecialchars($result),
             'bookingdate' => htmlspecialchars($this->input->post('booking', true)),
             'keluhan' => htmlspecialchars($this->input->post('keluhan', true)),

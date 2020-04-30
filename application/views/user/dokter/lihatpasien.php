@@ -28,31 +28,25 @@
         <i class="fas fa-bars"></i>
       </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>dokter">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('dokter/datapasien'); ?>">DATA PASIEN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">VIEW PROFILE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </section>
-    <section id="banner">
-        <div class="d-flex justify-content-center">
-            <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
-        </div>
-        <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
-    </section>
-    <section class="services">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url(); ?>dokter">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('dokter/datapasien'); ?>">DATA PASIEN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url(); ?>dokter/editprofiledokter">VIEW PROFILE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('auth/logout'); ?>">LOGOUT</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</section>
+<section id="banner">
   <div class="d-flex justify-content-center">
     <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
   </div>
@@ -83,7 +77,7 @@
             <?php foreach ($pesanS as $ps) : ?>
               <tr>
                 <form action="">
-                  <td><?= $ps['nama_dokter'] ?></td>
+                  <td><?= $ps['nama_pasien'] ?></td>
                   <td><?= $ps['nama_service'] ?></td>
                   <td><?= $ps['bookingdate'] ?></td>
                   <td><?= $ps['keluhan'] ?></td>
