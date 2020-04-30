@@ -19,7 +19,8 @@ class admin extends CI_Controller
         $this->load->view('user/admin/produk/lihatproduk_admin', ['data' => $produk]);
         $this->load->view('template/menu_footer');
     }
-    public function uploadImage(){
+    public function uploadImage()
+    {
 
         $config['upload_path']          =  './assets/image';
         $config['allowed_types']        =  'gif|jpg|png';
@@ -55,25 +56,17 @@ class admin extends CI_Controller
     public function updateProduk($id_produk)
     {
         if (!empty($_FILES["uploadImage"]["name"])) {
-            $this->image = $this->uploadImage();
+            $image = $this->uploadImage = $this->uploadImage();
         } else {
-            $this->image = $post["old_image"];
+            $image = $this->uploadImage = $this->input->post('old_image', true);
         }
         $this->load->model('produkModel');
-        $config['upload_path']          =  './assets/image';
-        $config['allowed_types']        =  'gif|jpg|png';
-        $config['max_size']             =  40240;
-        $config['max_width']            =  1920;
-        $config['max_height']           =  1080;
-        $this->load->library('upload', $config);
-        $this->upload->do_upload('uploadImage');
-        $image = $this->upload->data();
         $data = [
             'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),
             'kategori' => htmlspecialchars($this->input->post('kategori', true)),
             'deskripsi' => htmlspecialchars($this->input->post('deskripsi', true)),
             'harga' => htmlspecialchars($this->input->post('harga', true)),
-            'produk_img' => $image['file_name']
+            'produk_img' => $image
         ];
         $cek = $this->produkModel->updateProduk($id_produk, $data);
         if ($cek) $this->session->set_flashdata('info', 'Product Berhasil diupdate!');

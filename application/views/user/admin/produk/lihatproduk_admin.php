@@ -214,8 +214,9 @@
                                         <span class="input-group-text">Upload</span>
                                     </div>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="uploadImage" name="uploadImage" accept='image/*' value="<?= $d['produk_img'] ?>">
-                                        <label class="custom-file-label text-left" for="uploadImage">Choose file</label>
+                                        <input type="file" class="custom-file-input" id="updateImage" name="uploadImage" accept='image/*'>
+                                        <input type="hidden" name="old_image" value="<?= $d['produk_img'] ?>">
+                                        <label class="custom-file-label text-left" id="updateImageLabel" for="uploadImage">Choose file</label>
                                     </div>
                                 </div>
                             </div>
@@ -232,12 +233,14 @@
     <?php endforeach; ?>
     <script src="<?php echo base_url('assets/jquery-3.2.1.min.js'); ?>"></script>
     <script>
-        $('.custom-file-input').on('change', function() {
-            let fileName = $(this).val().split('\\').pop();
-            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        // $('#uploadImage').on('change', function() {
+        //     let fileName = $(this).val().split('\\').pop();
+        //     $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        // });
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
         });
-        $('.custom-file-input').on('change', function() {
-            let fileName = $(this).val().split('\\').pop();
-            $(this).next('.custom-file-label').addClass("selected").html(fileName);
-        });
+    </script>
+    <script>
     </script>
