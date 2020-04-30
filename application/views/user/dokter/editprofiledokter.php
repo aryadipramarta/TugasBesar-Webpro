@@ -54,9 +54,9 @@
     </section>
     <section class="services">
   <div class="d-flex justify-content-center">
-    <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner">
+    <!-- <img src="<?= base_url('assets/image/logo.png') ?>" alt="" class="img-logobanner"> -->
   </div>
-  <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img">
+  <!-- <img src="<?= base_url('assets/image/wave1.png') ?>" class="bottom-img"> -->
 </section>
 <section class="services">
   <div class="d-flex justify-content-center">
@@ -72,15 +72,15 @@
           <form>
           <div class="form-group">
           <label for="exampleInputName">Nama Dokter</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isinama">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=<?=$d['name']?>>
           </div>
           <div class="form-group">
           <label for="exampleInputEmail1">Username</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isiusername">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=<?=$d['username']?>>
           </div>
           <div class="form-group">
           <label for="exampleInputPassword1">Email</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="isiemail">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=<?=$d['email']?>>
           </div>
           </form>
         </div>

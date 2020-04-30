@@ -16,9 +16,7 @@ class admin extends CI_Controller
     {
         $this->load->model('produkModel');
         $produk = $this->produkModel->getAllProduk();
-        $encode_data = json_encode($produk);
-        $decode_data = json_decode($encode_data);
-        $this->load->view('user/admin/produk/lihatproduk_admin', ['data' => $decode_data]);
+        $this->load->view('user/admin/produk/lihatproduk_admin', ['data' => $produk]);
         $this->load->view('template/menu_footer');
     }
     public function uploadImage(){
