@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2020 at 12:27 PM
+-- Generation Time: May 05, 2020 at 12:08 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -43,7 +43,7 @@ CREATE TABLE `pesan_produk` (
 
 INSERT INTO `pesan_produk` (`id_pesanproduk`, `id_produk`, `id_user`, `nama_produk`, `jumlahpesanan`, `alamat`) VALUES
 (1, 1, 1, 'SkinSaver Gentle Skin Cleanser', 1, 'VILA NUSA INDAH 2 BLOK CC3/10 RT.05/RW.28 BOJONG KULUR GUNUNG PUTRI BOGOR KABUPATEN BOGOR JAWA BARAT'),
-(2, 2, 5, 'SkinSaver Cleanser with 2 % Benzoyl Peroxide', 3, 'KOMPLEK TAMAN CITRA BERLINDO 1 BLOK H/4 TABING KABUPATEN BOGOR JAWA BARAT');
+(2, 2, 5, 'SkinSaver Cleanser with 2% Benzoyl Peroxide', 1, 'VILA NUSA INDAH 2 BLOK CC3/10 RT.05/RW.28 BOJONG KULUR GUNUNG PUTRI BOGOR KABUPATEN BOGOR JAWA BARAT');
 
 -- --------------------------------------------------------
 
@@ -57,6 +57,7 @@ CREATE TABLE `pesan_service` (
   `id_service` int(11) NOT NULL,
   `id_dokter` int(11) NOT NULL,
   `nama_dokter` varchar(256) NOT NULL,
+  `nama_pasien` varchar(256) NOT NULL,
   `nama_service` varchar(256) NOT NULL,
   `bookingdate` date NOT NULL,
   `keluhan` varchar(256) NOT NULL,
@@ -67,8 +68,8 @@ CREATE TABLE `pesan_service` (
 -- Dumping data for table `pesan_service`
 --
 
-INSERT INTO `pesan_service` (`id_pesanservice`, `id_user`, `id_service`, `id_dokter`, `nama_dokter`, `nama_service`, `bookingdate`, `keluhan`, `harga`) VALUES
-(1, 5, 4, 7, 'Nanang', 'Facial', '2020-08-03', 'wajah perih', 150000);
+INSERT INTO `pesan_service` (`id_pesanservice`, `id_user`, `id_service`, `id_dokter`, `nama_dokter`, `nama_pasien`, `nama_service`, `bookingdate`, `keluhan`, `harga`) VALUES
+(1, 1, 1, 5, 'Sukijo', 'Faishal Raihan', 'pijatt', '2011-08-19', 'mantap', 80000);
 
 -- --------------------------------------------------------
 
@@ -90,11 +91,11 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama_produk`, `kategori`, `deskripsi`, `harga`, `produk_img`) VALUES
-(1, 'SkinSaver Gentle Skin Cleanser', 'Cleanser', 'Pembersih kami yang paling laris dan disukai banyak orang, formulanya tanpa menggunakan bahan yang tidak penting dan efektif. Membersihkan sekaligus melembapkan', 75000, 'facewash1.png'),
-(2, 'SkinSaver Cleanser with 2 % Benzoyl Peroxide', 'Cleanser', 'Dengan 2% Benzoyl Peroxide, facewash ini dapat membantu untuk mengurangi peradangan, membunuh bakteri penyebab jerawat, dan membersihkan tanpa membuat kering', 80000, 'facewash2.png'),
+(1, 'SkinSaver Gentle Skin Cleanser', 'Cleanser', 'Pembersih kami yang paling laris dan disukai banyak orang, formulanya tanpa menggunakan bahan yang tidak penting dan efektif. Membersihkan sekaligus melembabkan', 75000, 'facewash1.png'),
+(2, 'SkinSaver Cleanser with 2 % Benzoyl Peroxide', 'Cleanser', Dengan 2% Benzoyl Peroxide, facewash ini dapat membantu untuk mengurangi peradangan, membunuh bakteri penyebab jerawat, dan membersihkan tanpa membuat kering', 80000, 'facewash2.png'),
 (3, 'SkinSaver LightDay Moisturizer with SPF', 'Moisturizer', 'Melembabkan kulit sekaligus memberikan proteksi terhadap sinar matahari terhadap kulit dari sinar UVA/UVB dengan SPF50+/PA+++', 100000, 'moist1.png'),
-(4, 'SkinSaver Barrier Moisturizer with Ceramide', 'Moisturizer', 'Melembabkan kulit sekaligus memperbaiki skin barrier kulit yang rusak dan menjaganya tetap sehat dengan kandungan Ceramide', 12000, 'moist2.png'),
-(5, 'SkinSaver Acne Spot treatment', 'Acne Spot', 'Spot Treatment terbaik yang mengandung 2.5% Benzoyl Peroxide, yang dapat membunuh bakteri penyebab jerawat, sekaligus membuka pori-pori kulit yang tertutup\"', 60000, 'acnespot.png'),
+(4, 'SkinSaver Barrier Moisturizer with Ceramide', 'Moisturizer', 'Melembabkan kulit sekaligus memperbaiki skin barrier kulit yang rusak dan menjaganya tetap sehat dengan kandungan Ceramide', 120000, 'moist2.png'),
+(5, 'SkinSaver Acne Spot treatment', 'Acne Spot', 'Spot Treatment terbaik yang mengandung 2.5% Benzoyl Peroxide, yang dapat membunuh bakteri penyebab jerawat, sekaligus membuka pori-pori kulit yang tertutup', 60000, 'acnespot.png'),
 (6, 'SkinSaver Niacinamide and Zink Serum', 'Serum', 'Serum yang mengandung Niacinamide 10% dan Zinc 1%, membantu untuk mengurangi dark spot, mengurangi kerutan, meratakan warna kulit, dan memperbaiki tesktur kulit anda', 140000, 'serum.png');
 
 -- --------------------------------------------------------
@@ -118,7 +119,7 @@ INSERT INTO `service` (`id_service`, `nama_service`, `deskripsi`, `harga`) VALUE
 (1, 'Pembersihan Jerawat', 'mantap jiwa!!!!', 80000),
 (2, 'Buka Jerawat', 'sangat mantul!', 100000),
 (3, 'Poles Wajah', 'menjadikan wajah anda cantik dan tampan', 200000),
-(4, 'Facial', 'menjadikan wajah anda lembut dan sehat', 150000),
+(4, 'Facial', 'menjadikan wajah anda cantik dan tampan', 150000),
 (5, 'Pijat Wajah', 'sangat nyaman dan nikmat', 100000);
 
 -- --------------------------------------------------------
@@ -142,12 +143,12 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `name`, `username`, `email`, `password`, `role_id`) VALUES
 (1, 'Faishal Raihan', 'redxx', 'faishalraihan73@gmail.com', '$2y$10$X6c5LBy0TxMn/TVIq3UvAO65X/QeEXxC73OLwfSqRq.rmcVPm4u2q', 2),
-(2, 'Panjul Jukipli', 'Panjulll', 'panjul@gmail.com', '$2y$10$JifpR/ioi.cdOSyAWlduRukcc/Y616B/gz7m60oRBTNxgufr2qA.m', 2),
-(3, 'Sukijo', 'sukijo', 'sukijo@gmail.com', '$2y$10$2WVKFi7iKtVqno2OreuULucE09RsMO9RW7YYQC2sYMPR0C9JUA9K2', 1),
-(4, 'admin', 'admin', 'admin@gmail.com', '$2y$10$GJIepy6fxxMlNM9FbmyzZ.9UsT/Rt8nnL6qQEJi6b4nMFBPYnY/ay', 3),
-(5, 'amin', 'amin1', 'amin1@yahoo.com', '$2y$10$wHC/.APpwhdc0sjWmzGKzeU8WCAuTPWviyq2C4ZH7hcRlYkP3Ktza', 2),
-(6, 'Paijo', 'Paijo', 'Paijo@gmail.com', '$2y$10$HDwfsd0vdQCjcvfJT397ROxOK9WsW/4Oh6xBh4tR5n06ZcfNbiw8a', 1),
-(7, 'Nanang', 'Nanang', 'Nanang@gmail.com', '$2y$10$0YZ14b3ZTGhC7MU481H8Me2i0CqhSAEpqB8TTOlp/.zcJn.n6yHFq', 1),
+(2, 'amin', 'amin1', 'amin@gmail.com', '$2y$10$wHC/.APpwhdc0sjWmzGKzeU8WCAuTPWviyq2C4ZH7hcRlYkP3Ktza', 2),
+(3, 'Panjul Jukipli', 'Panjulll', 'panjul@gmail.com', '$2y$10$JifpR/ioi.cdOSyAWlduRukcc/Y616B/gz7m60oRBTNxgufr2qA.m', 2),
+(4, 'Paijo', 'Paijo', 'Paijo@gmail.com', '$2y$10$HDwfsd0vdQCjcvfJT397ROxOK9WsW/4Oh6xBh4tR5n06ZcfNbiw8a', 1),
+(5, 'Sukijo', 'sukijo', 'sukijo@gmail.com', '$2y$10$2WVKFi7iKtVqno2OreuULucE09RsMO9RW7YYQC2sYMPR0C9JUA9K2', 1),
+(6, 'Nanang', 'Nanang', 'Nanang@gmail.com', '$2y$10$0YZ14b3ZTGhC7MU481H8Me2i0CqhSAEpqB8TTOlp/.zcJn.n6yHFq', 1),
+(7, 'admin', 'admin', 'admin@gmail.com', '$2y$10$GJIepy6fxxMlNM9FbmyzZ.9UsT/Rt8nnL6qQEJi6b4nMFBPYnY/ay', 3),
 (8, 'Herman', 'Herman', 'herman@gmail.com', '$2y$10$KtL9ZLRfz7WAyyapRFodG.bf2sVv8Ba4EwJKEBZKpMe3T6UELKwdC', 1),
 (9, 'Dedi', 'Dedi', 'dedi@gmail.com', '$2y$10$wMVQQJNWZ1DDWI3RikC6LusMQ6CiuHyUYNmLr/8rnLt4KFyofVM7e', 1);
 
@@ -225,31 +226,31 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `pesan_produk`
 --
 ALTER TABLE `pesan_produk`
-  MODIFY `id_pesanproduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pesanproduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pesan_service`
 --
 ALTER TABLE `pesan_service`
-  MODIFY `id_pesanservice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pesanservice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_service` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user_role`
