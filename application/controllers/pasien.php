@@ -64,10 +64,14 @@ class pasien extends CI_Controller
             'valid_email' => 'Email is not valid!'
         ]);
         $this->load->model('authModel');
+        $this->load->model('serviceModel');
         $data = [
             'name' => htmlspecialchars($this->input->post('name', true)),
             'username' => htmlspecialchars($this->input->post('username', true)),
             'email' => htmlspecialchars($this->input->post('email', true)),
+        ];
+        $dataS = [
+            'nama_pasien' => htmlspecialchars($this->input->post('name', true))
         ];
         if ($this->form_validation->run() == false) {
             echo 'gagal';
@@ -75,6 +79,7 @@ class pasien extends CI_Controller
         } else {
 
             $this->authModel->editUser($id_user, $data);
+            $this->serviceModel->editNamaPasien($id_user, $dataS);
             $result = $this->db->get_where('user', ['username' => $data['username']])->row_array();
             $user = [
                 'name' => $result['name'],

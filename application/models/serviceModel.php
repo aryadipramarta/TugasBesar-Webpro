@@ -61,4 +61,10 @@ class serviceModel extends CI_Model
         $result = $this->db->get()->result_array();
         return $result;
     }
+    public function editNamaPasien($id_user, $data)
+    {
+        $this->db->where('id_user', $id_user);
+        $result = $this->db->update('pesan_service', $data);
+        return $result;
+    }
 }
