@@ -70,32 +70,80 @@
       <div class="cardeditprofile">
         <div class="card-body">
           <div class="d-flex justify-content-center">
-            <img src="<?= base_url('assets/image/profileedit.png') ?>" alt="" class="editprofileimg">
+            <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" class="editprofileimg">
           </div>
           <div class="d-flex justify-content-center">
-            <h3 class="juduledit"><b>EDIT PROFILE</b></h3>
+            <h3 class="juduledit"><b>GIVE FEEDBACK TO US</b></h3>
           </div>
           <div class="d-flex justify-content-center">
-            <?= form_open_multipart('pasien/editProfile/' . $d['id_user']) ?>
-            <form>
+            <span id="success_message"></span>
+            <form method="post" id="feedback_form">
               <div class="form-group">
                 <label for="exampleInputName">Nama</label>
                 <input type="text" class="form-control" id="exampleInputnama" name="name" aria-describedby="nameHelp">
-              </div>
-              <div class=" form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputusername" name="username" aria-describedby="usernameHelp">
+                <span id="name_error" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
                 <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp">
-              </div>
-              <?= form_submit('submit', 'Submit', ['class' => 'btn_edit']); ?>
-              <!-- <button type="button" data-target="#modaledit" class="btn_edit" data-toggle="modal">EDIT DATA</button> -->
+                <span id="email_error" class="text-danger"></span>  
+            </div>
+              <div class="form-group">
+                <label for="pesan">Berikan Kami Masukkan</label>
+                 <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+                 <span id="pesan_error" class="text-danger"></span>
+                </div>
+             <input type="submit" name="feedback" id="feedback" class="btn btn-info" value="Kirim Feedback">
             </form>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <script>
+      $(document).ready(function(){
+
+        $("feedback_form").on('submit', function(event){
+            event.preventDefault();
+            $.ajax({
+                url: "<?php echo base_url(); ?>pasien/feedback_validation",
+                method:"POST",
+                data:$(this).serialize(),
+                dataType:"json",
+                beforeSend:function(){
+                    $('#feedback').attr('disable','disabled');
+                },
+                success:function(data){
+                    if(data.error){
+                        if(data.name_error != ''){
+                            $('#name_error').html(data.name_error);
+                        }else{
+                            $('#name_error').html('');
+                        }
+                        if(data.email_error != ''){
+                            $('#email_error').html(data.email_error);
+                        }
+                        else{
+                            $('#email_error').html('');
+                        }
+                        if(data.pesan_error != ''){
+                            $('#pesan_error').html(data.email_error);
+                        }
+                        else{
+                            $('#pesan_error').html('');
+                        }
+                    }
+                    if(data.success){
+                        $('#success_message').html(data.success);
+                        $('#name_error').html('');
+                        $('#email_error').html('');
+                        $('#pesan_error').html('');
+                        $('#feedback_form')[0].reset();
+                    }
+                    $('#feedback').attr('disabled', false)
+                }             
+            })
+        });
+      });
+</script>
 <?php endforeach; ?>
