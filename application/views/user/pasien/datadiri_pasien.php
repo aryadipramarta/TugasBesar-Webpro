@@ -80,21 +80,23 @@
             <h3 class="juduledit"><b>DATA DIRI</b></h3>
           </div>
           <div class="d-flex justify-content-center">
+          <form>
               <div class="form-group">
                 <label for="exampleInputName">Nama</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" disabled>
                 <span id="name_error" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email"disabled>
                 <span id="email_error" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Username</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="username" name="username"disabled>
                 <span id="email_error" class="text-danger"></span>
               </div>
+              </form>
           </div>
         </div>
       </div>
