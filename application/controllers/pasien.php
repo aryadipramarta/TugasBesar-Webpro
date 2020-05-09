@@ -50,6 +50,15 @@ class pasien extends CI_Controller
         $this->load->view('user/pasien/editprofile_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
+    public function dataDiri()
+    {
+        $session = $this->session->userdata('username');
+        //if (!isset($session)) redirect('auth');
+        $this->load->model('authModel');
+        $user = $this->authModel->get_profile($session);
+        $this->load->view('user/pasien/datadiri_pasien', ['data' => $user]);
+        $this->load->view('template/menu_footer');
+    }
     public function feedback()
     {
         $session = $this->session->userdata('username');
@@ -59,41 +68,7 @@ class pasien extends CI_Controller
         $this->load->view('user/pasien/feedback_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
-    public function addFeedback()
-    {
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('name', 'Full Name', 'required|trim');
-        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
-            'is_unique' => 'Email already taken!',
-            'valid_email' => 'Email is not valid!'
-        ]);
-        $this->form_validation->set_rules('pesan', 'Pesan', 'required|trim');
-        $this->load->model('serviceModel');
-        $data = [
-            'name' => htmlspecialchars($this->input->post('name', true)),
-            'username' => htmlspecialchars($this->input->post('username', true)),
-            'email' => htmlspecialchars($this->input->post('email', true)),
-        ];
-        if ($this->form_validation->run()) {
-            //echo "success";
-            $array = array(
-                'success' => '<div class="alert alert-success">Thank you for your feedback!</div>'
-            );
 
-            // $this->serviceModel->addFeedback($data);
-            // redirect('pasien/feedback', 'refresh');
-            //redirect('pasien/profile', 'refresh');
-        } else {
-            $array = array(
-
-                'error' => true,
-                'name_error' => form_error('name'),
-                'email_error' => form_error('email'),
-                'pesan_error' => form_error('pesan')
-            );
-            echo json_encode($array);
-        }
-    }
     public function editProfile($id_user)
     {
         $this->load->library('form_validation');
