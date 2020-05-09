@@ -44,7 +44,7 @@
               <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">PESAN SERVICE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/feedback'); ?>">FEEDBACK</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/datadiri'); ?>">PROFILE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">EDIT PROFILE</a>

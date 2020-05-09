@@ -10,7 +10,7 @@
 
   <title>SkinSaver</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
@@ -74,33 +74,27 @@
             <img src="<?= base_url('assets/image/feedback.png') ?>" alt="" class="editprofileimg">
           </div>
           <div class="d-flex justify-content-center">
-
             <span id="success_message"></span>
           </div>
           <div class="d-flex justify-content-center">
-            <h3 class="juduledit"><b>GIVE FEEDBACK TO US</b></h3>
+            <h3 class="juduledit"><b>DATA DIRI</b></h3>
           </div>
           <div class="d-flex justify-content-center">
-            <form method="post" id="feedback_form">
               <div class="form-group">
                 <label for="exampleInputName">Nama</label>
-                <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
+                <input type="text" class="form-control" id="name" name="name">
                 <span id="name_error" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="email" name="email">
                 <span id="email_error" class="text-danger"></span>
               </div>
               <div class="form-group">
-                <label for="pesan">Berikan Kami Masukkan</label>
-                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
-                <span id="pesan_error" class="text-danger"></span>
+                <label for="exampleInputPassword1">Username</label>
+                <input type="email" class="form-control" id="email" name="email">
+                <span id="email_error" class="text-danger"></span>
               </div>
-              <div class="form-group">
-                <input type="submit" name="feedback" id="feedback" class="btn btn-info" value="Kirim Feedback">
-              </div>
-            </form>
           </div>
         </div>
       </div>
@@ -108,46 +102,4 @@
   </section>
 <?php endforeach; ?>
 <script>
-  $(document).ready(function() {
-
-    $('#feedback_form').on('submit', function(event) {
-      event.preventDefault();
-      $.ajax({
-        url: "<?= base_url('pasien/addFeedback'); ?>",
-        method: "POST",
-        data: $(this).serialize(),
-        dataType: "json",
-        beforeSend: function() {
-          $('#feedback').attr('disabled', 'disabled');
-        },
-        success: function(data) {
-          if (data.error) {
-            if (data.name_error != '') {
-              $('#name_error').html(data.name_error);
-            } else {
-              $('#name_error').html('');
-            }
-            if (data.email_error != '') {
-              $('#email_error').html(data.email_error);
-            } else {
-              $('#email_error').html('');
-            }
-            if (data.pesan_error != '') {
-              $('#pesan_error').html(data.pesan_error);
-            } else {
-              $('#pesan_error').html('');
-            }
-          }
-          if (data.success) {
-            $('#success_message').html(data.success);
-            $('#name_error').html('');
-            $('#email_error').html('');
-            $('#pesan_error').html('');
-            $('#feedback_form')[0].reset();
-          }
-          $('#feedback').attr('disabled', false)
-        }
-      })
-    });
-  });
 </script>
