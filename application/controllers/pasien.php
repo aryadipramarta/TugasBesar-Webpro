@@ -65,7 +65,7 @@ class pasien extends CI_Controller
         //if (!isset($session)) redirect('auth');
         $this->load->model('authModel');
         $user = $this->authModel->get_profile($session);
-        $this->load->view('user/pasien/feedback_pasien', ['data' => $user]);
+        $this->load->view('user/pasien/datadiri_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
 
