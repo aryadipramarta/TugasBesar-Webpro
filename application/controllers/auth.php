@@ -78,16 +78,16 @@ class auth extends CI_Controller
         $this->load->view('landingpage/homepage_view');
         $this->load->view('template/menu_footer');
     }
-    public function editUser()
-    {
-        $this->form_validation->set_rules('username', 'Username', 'required|trim');
-        $this->form_validation->set_rules('password', 'Password', 'required|trim');
-        if ($this->form_validation->run() == false) {
+    // public function editUser()
+    // {
+    //     $this->form_validation->set_rules('username', 'Username', 'required|trim');
+    //     $this->form_validation->set_rules('password', 'Password', 'required|trim');
+    //     if ($this->form_validation->run() == false) {
 
-            $data['title'] = 'SkinSaver-Edit Profile';
-        } else {
-        }
-    }
+    //         $data['title'] = 'SkinSaver-Edit Profile';
+    //     } else {
+    //     }
+    // }
     public function deleteUser()
     {
         $username = $this->session->userdata('username');

@@ -67,4 +67,9 @@ class serviceModel extends CI_Model
         $result = $this->db->update('pesan_service', $data);
         return $result;
     }
+    public function addFeedback($data)
+    {
+        $result = $this->db->insert('feedback', $data);
+        return $result;
+    }
 }

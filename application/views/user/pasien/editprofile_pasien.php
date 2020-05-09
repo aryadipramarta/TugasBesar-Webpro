@@ -77,18 +77,18 @@
           </div>
           <div class="d-flex justify-content-center">
             <?= form_open_multipart('pasien/editProfile/' . $d['id_user']) ?>
-            <form>
+            <form method="post" action="">
               <div class="form-group">
                 <label for="exampleInputName">Nama</label>
-                <input type="text" class="form-control" id="exampleInputnama" name="name" aria-describedby="nameHelp">
+                <input type="text" class="form-control" id="exampleInputnama" name="name" aria-describedby="nameHelp" required="" oninvalid="this.setCustomValidity('Please Enter valid name')" oninput="setCustomValidity('')">
               </div>
               <div class=" form-group">
                 <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputusername" name="username" aria-describedby="usernameHelp">
+                <input type="text" class="form-control" id="exampleInputusername" name="username" aria-describedby="usernameHelp" required="" oninvalid="this.setCustomValidity('Please Enter Username')" oninput="setCustomValidity('')">
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp" required="" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
               </div>
               <?= form_submit('submit', 'Submit', ['class' => 'btn_edit']); ?>
               <!-- <button type="button" data-target="#modaledit" class="btn_edit" data-toggle="modal">EDIT DATA</button> -->

@@ -33,5 +33,7 @@
 <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js" charset="utf-8"></script>
 <script src="<?= base_url('assets/js/table.js') ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.10/dist/sweetalert2.all.min.js"></script>
+
 </body>
+
 </html>
