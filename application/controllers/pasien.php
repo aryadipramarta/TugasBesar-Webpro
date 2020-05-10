@@ -93,8 +93,13 @@ class pasien extends CI_Controller
             'nama_pasien' => htmlspecialchars($this->input->post('name', true))
         ];
         if ($this->form_validation->run() == false) {
-            echo 'gagal';
-            //redirect('pasien/profile', 'refresh');
+            //echo 'gagal';
+            $session = $this->session->userdata('username');
+            //if (!isset($session)) redirect('auth');
+            $this->load->model('authModel');
+            $user = $this->authModel->get_profile($session);
+            $this->load->view('user/pasien/editprofile_pasien', ['data' => $user]);
+            $this->load->view('template/menu_footer');
         } else {
 
             $this->authModel->editUser($id_user, $data);

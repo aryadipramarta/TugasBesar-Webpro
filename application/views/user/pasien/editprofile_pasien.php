@@ -80,15 +80,24 @@
             <form method="post" action="">
               <div class="form-group">
                 <label for="exampleInputName">Nama</label>
-                <input type="text" class="form-control" id="exampleInputnama" name="name" aria-describedby="nameHelp" required="" oninvalid="this.setCustomValidity('Please Enter valid name')" oninput="setCustomValidity('')">
+                <input type="text" class="form-control" id="exampleInputnama" name="name" aria-describedby="nameHelp">
+                <small class="text-danger">
+                  <?= form_error('name');  ?>
+                </small>
               </div>
               <div class=" form-group">
                 <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputusername" name="username" aria-describedby="usernameHelp" required="" oninvalid="this.setCustomValidity('Please Enter Username')" oninput="setCustomValidity('')">
+                <input type="text" class="form-control" id="exampleInputusername" name="username" aria-describedby="usernameHelp">
+                <small class="text-danger">
+                  <?= form_error('username');  ?>
+                </small>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp" required="" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+                <input type="email" class="form-control" id="exampleInputEmail" name="email" aria-describedby="emailHelp">
+                <small class="text-danger">
+                  <?= form_error('email');  ?>
+                </small>
               </div>
               <?= form_submit('submit', 'Submit', ['class' => 'btn_edit']); ?>
               <!-- <button type="button" data-target="#modaledit" class="btn_edit" data-toggle="modal">EDIT DATA</button> -->
