@@ -45,7 +45,7 @@
               <a class="nav-link" href="<?php echo base_url('pasien/service'); ?>">PESAN SERVICE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('pasien/feedback'); ?>">FEEDBACK</a>
+              <a class="nav-link" href="<?php echo base_url('pasien/datadiri'); ?>">PROFILE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('pasien/profile'); ?>">EDIT PROFILE</a>
@@ -81,21 +81,9 @@
           </div>
           <div class="d-flex justify-content-center">
           <form>
-              <div class="form-group">
-                <label for="exampleInputName">Nama</label>
-                <input type="text" class="form-control" id="name" name="name" disabled>
-                <span id="name_error" class="text-danger"></span>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" id="email" name="email"disabled>
-                <span id="email_error" class="text-danger"></span>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Username</label>
-                <input type="email" class="form-control" id="username" name="username"disabled>
-                <span id="email_error" class="text-danger"></span>
-              </div>
+          <label id="nama" class="nama"><i class="fas fa-id-card"></i> Nama : </label><span id='sname'></span><br/>
+          <label id="uname"><i class="far fa-id-badge"></i> Username : </label><span id='susername'></span><br/>
+          <label id="emails"><i class="far fa-envelope"></i> Email : </label><span id='semail'></span><br/>
               </form>
           </div>
         </div>
@@ -103,5 +91,22 @@
     </div>
   </section>
 <?php endforeach; ?>
-<script>
+<script type="text/javascript">
+ambilData()
+        function ambilData(){
+          $.ajax({
+            type:'POST',
+            url:'<?php echo base_url()."pasien/ambildatapasien"?>',
+            dataType : 'json',
+            success: function(data){
+                var nama = `<h5> ${data[0].name} </h5>`;
+                var username = `<h5> ${data[0].username} </h5`;
+                var email = `<h5> ${data[0].email} </h5>`;
+                $('.nama').append(nama);
+                $('#uname').append(username);
+                $('#emails').append(email);
+            }
+          })
+        }
+
 </script>
