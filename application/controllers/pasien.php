@@ -59,16 +59,14 @@ class pasien extends CI_Controller
         $this->load->view('user/pasien/datadiri_pasien', ['data' => $user]);
         $this->load->view('template/menu_footer');
     }
-    public function feedback()
-    {
-        $session = $this->session->userdata('username');
-        //if (!isset($session)) redirect('auth');
-        $this->load->model('authModel');
-        $user = $this->authModel->get_profile($session);
-        $this->load->view('user/pasien/datadiri_pasien', ['data' => $user]);
-        $this->load->view('template/menu_footer');
-    }
 
+    public function ambildatapasien(){
+        $session = $this->session->userdata('username');
+        $this->load->model('authModel');
+        $datapasien = $this->authModel->get_profile($session);
+        echo json_encode($datapasien);
+    }
+    
     public function editProfile($id_user)
     {
         $this->load->library('form_validation');
